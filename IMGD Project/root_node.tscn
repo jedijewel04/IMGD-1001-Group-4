@@ -6007,3 +6007,5 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-458748, 1703937, 50, -393212, 1703937, 51, -458747, 1769473, 50, -393211, 1769473, 51, -458746, 1835009, 50, -393210, 1835009, 51, -327674, 1835009, 52, -393209, 1900545, 51, -327673, 1900545, 52)
+
+[node name="Player" type="CharacterBody2D" parent="."]
