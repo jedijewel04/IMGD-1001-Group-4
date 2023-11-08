@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bq7m4t4dabrk8"]
+
+[node name="TitleScreen" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+format = 2
+
+[node name="GUI" type="MarginContainer" parent="."]
+offset_left = -13.0
+offset_top = -14.0
+offset_right = 13.0
+offset_bottom = 12.0

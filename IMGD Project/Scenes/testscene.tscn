@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd1qxsot3t5dd"]
 
-[ext_resource type="Texture2D" uid="uid://c3juhubjy2wgt" path="res://1_Terrains_and_Fences_16x16.png" id="1_abdk4"]
-[ext_resource type="Texture2D" uid="uid://d3j5oxrw7ekjw" path="res://17_Garden_16x16.png" id="2_j5ldj"]
+[ext_resource type="Texture2D" uid="uid://c3juhubjy2wgt" path="res://Assets/1_Terrains_and_Fences_16x16.png" id="1_0dl47"]
+[ext_resource type="Texture2D" uid="uid://d3j5oxrw7ekjw" path="res://Assets/17_Garden_16x16.png" id="2_403ln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ulxw"]
-texture = ExtResource("1_abdk4")
+texture = ExtResource("1_0dl47")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -2060,7 +2060,7 @@ texture = ExtResource("1_abdk4")
 28:54/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxckm"]
-texture = ExtResource("2_j5ldj")
+texture = ExtResource("2_403ln")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -5991,7 +5991,7 @@ terrain_set_1/terrain_3/color = Color(0.376471, 0.501961, 0.25098, 1)
 sources/0 = SubResource("TileSetAtlasSource_5ulxw")
 sources/1 = SubResource("TileSetAtlasSource_jxckm")
 
-[node name="Root Node" type="Node"]
+[node name="TestScene" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
