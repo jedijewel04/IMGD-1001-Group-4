@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd1qxsot3t5dd"]
 
-[ext_resource type="Texture2D" uid="uid://c3juhubjy2wgt" path="res://Assets/1_Terrains_and_Fences_16x16.png" id="1_0dl47"]
-[ext_resource type="Texture2D" uid="uid://d3j5oxrw7ekjw" path="res://Assets/17_Garden_16x16.png" id="2_403ln"]
+[ext_resource type="Texture2D" uid="uid://c3juhubjy2wgt" path="res://Assets/Art/1_Terrains_and_Fences_16x16.png" id="1_tysxs"]
+[ext_resource type="Texture2D" uid="uid://d3j5oxrw7ekjw" path="res://Assets/Art/17_Garden_16x16.png" id="2_6ynmb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ulxw"]
-texture = ExtResource("1_0dl47")
+texture = ExtResource("1_tysxs")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -2060,7 +2060,7 @@ texture = ExtResource("1_0dl47")
 28:54/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxckm"]
-texture = ExtResource("2_403ln")
+texture = ExtResource("2_6ynmb")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
