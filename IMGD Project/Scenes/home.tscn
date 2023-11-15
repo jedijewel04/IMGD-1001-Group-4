@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c12ot7he7ernq"]
+
+[ext_resource type="TileSet" uid="uid://b74lw4ikh0r3g" path="res://Assets/exteriortiles.tres" id="1_pj6li"]
+
+[node name="home" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+texture_repeat = 1
+tile_set = ExtResource("1_pj6li")
+format = 2
+layer_0/name = "Ground"
+layer_1/name = "Building"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Objects_1"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Objects_2"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
+layer_3/tile_data = PackedInt32Array()
