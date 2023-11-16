@@ -36,5 +36,5 @@ layer_3/tile_data = PackedInt32Array(-262157, 1048581, 120, -655372, 1048581, 12
 
 [node name="Dog" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(397, -101)
+position = Vector2(395, -101)
 texture = ExtResource("2_rnnmi")
