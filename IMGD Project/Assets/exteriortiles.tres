@@ -1,11 +1,11 @@
-[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://b74lw4ikh0r3g"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://bly0leyxnvjqq"]
 
 [ext_resource type="Texture2D" uid="uid://c3juhubjy2wgt" path="res://Assets/Art/1_Terrains_and_Fences_16x16.png" id="1_yvnmg"]
 [ext_resource type="Texture2D" uid="uid://d3j5oxrw7ekjw" path="res://Assets/Art/17_Garden_16x16.png" id="2_ahrss"]
-[ext_resource type="Texture2D" uid="uid://j1bjdnienluy" path="res://Assets/Art/2_City_Terrains_16x16.png" id="3_e5fyf"]
-[ext_resource type="Texture2D" uid="uid://b8hgm3rjq0vbs" path="res://Assets/Art/3_City_Props_16x16.png" id="4_jxgc2"]
-[ext_resource type="Texture2D" uid="uid://bd1osnlmnjdna" path="res://Assets/Art/9_Shopping_Center_and_Markets_16x16.png" id="5_ibqev"]
-[ext_resource type="Texture2D" uid="uid://ixocq34xcqbw" path="res://Assets/Art/11_Camping_16x16.png" id="6_vsvrp"]
+[ext_resource type="Texture2D" path="res://Assets/Art/2_City_Terrains_16x16.png" id="3_e5fyf"]
+[ext_resource type="Texture2D" path="res://Assets/Art/3_City_Props_16x16.png" id="4_jxgc2"]
+[ext_resource type="Texture2D" path="res://Assets/Art/9_Shopping_Center_and_Markets_16x16.png" id="5_ibqev"]
+[ext_resource type="Texture2D" path="res://Assets/Art/11_Camping_16x16.png" id="6_vsvrp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ulxw"]
 texture = ExtResource("1_yvnmg")

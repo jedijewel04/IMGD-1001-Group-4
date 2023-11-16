@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bbct5lwj22ats"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://dkduj4mg3rosj"]
 
 [ext_resource type="Texture2D" uid="uid://b8igkflovkupy" path="res://Assets/Art/Interiors_free_16x16.png" id="1_rpwy0"]
 [ext_resource type="Texture2D" uid="uid://c2qnct0jwdvfa" path="res://Assets/Art/Room_Builder_free_16x16.png" id="2_bu3cw"]
@@ -1125,6 +1125,8 @@ texture = ExtResource("1_rpwy0")
 10:88/0 = 0
 14:88/0 = 0
 15:88/0 = 0
+6:65/0 = 0
+6:66/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eaa76"]
 texture = ExtResource("2_bu3cw")
