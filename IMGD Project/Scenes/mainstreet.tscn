@@ -44,5 +44,5 @@ texture = ExtResource("2_rnnmi")
 texture_filter = 1
 position = Vector2(169, -72)
 
-[node name="Player" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Player_Sprite" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("3_byb81")
