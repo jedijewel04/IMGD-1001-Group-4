@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0m6gusa728ly"]
+[gd_scene load_steps=4 format=3 uid="uid://b0m6gusa728ly"]
 
-[ext_resource type="TileSet" uid="uid://b74lw4ikh0r3g" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
+[ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
+[ext_resource type="Texture2D" uid="uid://cq7uaue2675el" path="res://Assets/Player.png" id="3_byb81"]
 
 [node name="mainstreet" type="Node2D"]
 
@@ -38,3 +39,10 @@ layer_3/tile_data = PackedInt32Array(-262157, 1048581, 120, -655372, 1048581, 12
 texture_filter = 1
 position = Vector2(395, -101)
 texture = ExtResource("2_rnnmi")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+texture_filter = 1
+position = Vector2(169, -72)
+
+[node name="Player" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("3_byb81")
