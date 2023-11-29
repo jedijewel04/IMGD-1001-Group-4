@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd1osnlmnjdna"
-path="res://.godot/imported/9_Shopping_Center_and_Markets_16x16.png-dd9bc3e0097b8dd27dd5e512e392342b.ctex"
+uid="uid://c3juhubjy2wgt"
+path="res://.godot/imported/1_Terrains_and_Fences_16x16.png-6b63a6c52d246e2004541b472e3fdae5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/9_Shopping_Center_and_Markets_16x16.png"
-dest_files=["res://.godot/imported/9_Shopping_Center_and_Markets_16x16.png-dd9bc3e0097b8dd27dd5e512e392342b.ctex"]
+source_file="res://Assets/Art/Exterior/1_Terrains_and_Fences_16x16.png"
+dest_files=["res://.godot/imported/1_Terrains_and_Fences_16x16.png-6b63a6c52d246e2004541b472e3fdae5.ctex"]
 
 [params]
 

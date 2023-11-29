@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ixocq34xcqbw"
-path="res://.godot/imported/11_Camping_16x16.png-851d2cf9ee4051d0e3a4a42d0ee817df.ctex"
+uid="uid://ct14k6v6bmoxe"
+path="res://.godot/imported/15_Police_Station_16x16.png-49ea48f52781ce0dcfa8e26ea0216928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/11_Camping_16x16.png"
-dest_files=["res://.godot/imported/11_Camping_16x16.png-851d2cf9ee4051d0e3a4a42d0ee817df.ctex"]
+source_file="res://Assets/Art/Exterior/15_Police_Station_16x16.png"
+dest_files=["res://.godot/imported/15_Police_Station_16x16.png-49ea48f52781ce0dcfa8e26ea0216928.ctex"]
 
 [params]
 
