@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://ci5l2dk3fwmna"]
 
-[ext_resource type="Texture2D" uid="uid://b8igkflovkupy" path="res://Assets/Art/Interiors_free_16x16.png" id="1_rpwy0"]
-[ext_resource type="Texture2D" uid="uid://c2qnct0jwdvfa" path="res://Assets/Art/Room_Builder_free_16x16.png" id="2_bu3cw"]
-[ext_resource type="Texture2D" uid="uid://cmxk7w770vdp0" path="res://Assets/Art/Modern_Office_16x16.png" id="3_g0e4j"]
-[ext_resource type="Texture2D" uid="uid://bwofsiuwhkpql" path="res://Assets/Art/Room_Builder_Office_16x16.png" id="4_ojtsr"]
-[ext_resource type="Texture2D" uid="uid://dawgl48rlh8k" path="res://Assets/Art/tileset.png" id="5_6d4u6"]
+[ext_resource type="Texture2D" path="res://Assets/Art/Interiors_free_16x16.png" id="1_rpwy0"]
+[ext_resource type="Texture2D" path="res://Assets/Art/Room_Builder_free_16x16.png" id="2_bu3cw"]
+[ext_resource type="Texture2D" path="res://Assets/Art/Modern_Office_16x16.png" id="3_g0e4j"]
+[ext_resource type="Texture2D" path="res://Assets/Art/Room_Builder_Office_16x16.png" id="4_ojtsr"]
+[ext_resource type="Texture2D" path="res://Assets/Art/tileset.png" id="5_6d4u6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1cox"]
 texture = ExtResource("1_rpwy0")
@@ -1729,8 +1729,12 @@ texture = ExtResource("3_g0e4j")
 8:25/0 = 0
 9:25/0 = 0
 10:25/0 = 0
+0:26/next_alternative_id = 3
 0:26/0 = 0
+3:26/next_alternative_id = 3
 3:26/0 = 0
+3:26/2 = 2
+3:26/2/flip_h = true
 6:26/0 = 0
 7:26/0 = 0
 8:26/0 = 0
@@ -1741,10 +1745,16 @@ texture = ExtResource("3_g0e4j")
 13:26/0 = 0
 14:26/0 = 0
 15:26/0 = 0
+0:27/next_alternative_id = 3
 0:27/0 = 0
+1:27/next_alternative_id = 2
 1:27/0 = 0
+2:27/next_alternative_id = 4
 2:27/0 = 0
+3:27/next_alternative_id = 3
 3:27/0 = 0
+3:27/2 = 2
+3:27/2/flip_h = true
 4:27/0 = 0
 5:27/0 = 0
 6:27/0 = 0
@@ -1757,10 +1767,16 @@ texture = ExtResource("3_g0e4j")
 13:27/0 = 0
 14:27/0 = 0
 15:27/0 = 0
+0:28/next_alternative_id = 3
 0:28/0 = 0
+1:28/next_alternative_id = 2
 1:28/0 = 0
+2:28/next_alternative_id = 2
 2:28/0 = 0
+3:28/next_alternative_id = 3
 3:28/0 = 0
+3:28/2 = 2
+3:28/2/flip_h = true
 4:28/0 = 0
 5:28/0 = 0
 6:28/0 = 0
