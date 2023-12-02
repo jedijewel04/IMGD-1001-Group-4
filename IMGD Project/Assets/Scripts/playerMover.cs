@@ -3,58 +3,20 @@ using System;
 
 public partial class playerMover : CharacterBody2D
 {
-	private Texture _upTexture;
-	private Texture _downTexture;
-	private Texture _leftTexture;
-	private Texture _rightTexture;
+	[Export]
+	public int Speed { get; set; } = 400;
 
-	public override void _Ready()
+	public void GetInput()
 	{
-		_upTexture = GD.Load<Texture>("res://Assets/CharacterSprites/Player-002.png");
-		_downTexture = GD.Load<Texture>("res://Assets/CharacterSprites/Player-001.png");
-		_leftTexture = GD.Load<Texture>("res://Assets/CharacterSprites/Player-003.png");
-		_rightTexture = GD.Load<Texture>("res://Assets/CharacterSprites/Player-004.png");
+
+		Vector2 inputDirection = Input.GetVector("move_left", "move_right", "move_up", "move_down");
+		Velocity = inputDirection * Speed;
 	}
 
-	protected virtual void _PhysicsProcess(float delta)
+	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Vector2.Zero;
-
-		if (Input.IsActionPressed("move_right"))
-		{
-			velocity.x += 1;
-			SetTexture(_rightTexture);
-		}
-		else if (Input.IsActionPressed("move_left"))
-		{
-			velocity.x -= 1;
-			SetTexture(_leftTexture);
-		}
-
-		if (Input.IsActionPressed("move_down"))
-		{
-			velocity.y += 1;
-			SetTexture(_downTexture);
-		}
-		else if (Input.IsActionPressed("move_up"))
-		{
-			velocity.y -= 1;
-			SetTexture(_upTexture);
-		}
-
+		GetInput();
 		MoveAndSlide();
 	}
-
-	private void SetTexture(Texture texture)
-	{
-		Sprite sprite = GetNode<Sprite>("Sprite");
-		if (sprite != null)
-		{
-			sprite.Texture = texture;
-		}
-		else
-		{
-			GD.Print("Sprite node not found!");
-		}
-	}
 }
+

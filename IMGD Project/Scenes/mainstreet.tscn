@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://7j1re0chkwqd"]
 
-[ext_resource type="TileSet" uid="uid://ddv72jtlr3615" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
+[ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
 [ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="3_wp3xj"]
 [ext_resource type="Texture2D" uid="uid://d4ltb0cpndon7" path="res://Assets/CharacterSprites/Player-001.png" id="4_12dnp"]
@@ -74,7 +74,7 @@ texture = ExtResource("2_rnnmi")
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 2
 texture_filter = 1
-position = Vector2(179, -93)
+position = Vector2(179, 85)
 motion_mode = 1
 script = ExtResource("3_wp3xj")
 metadata/moveSpeed = 150.0
