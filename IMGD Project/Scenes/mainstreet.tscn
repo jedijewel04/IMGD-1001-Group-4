@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://ddv72jtlr3615" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
-[ext_resource type="Script" path="res://Assets/playerMover.cs" id="3_8m8x6"]
-[ext_resource type="Texture2D" uid="uid://cq7uaue2675el" path="res://Assets/Player.png" id="3_byb81"]
+[ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="3_wp3xj"]
+[ext_resource type="Texture2D" uid="uid://d4ltb0cpndon7" path="res://Assets/CharacterSprites/Player-001.png" id="4_12dnp"]
 
 [node name="mainstreet" type="Node2D"]
 
@@ -76,11 +76,11 @@ z_index = 2
 texture_filter = 1
 position = Vector2(179, -93)
 motion_mode = 1
-script = ExtResource("3_8m8x6")
+script = ExtResource("3_wp3xj")
 metadata/moveSpeed = 150.0
 
 [node name="Player_Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("3_byb81")
+texture = ExtResource("4_12dnp")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
