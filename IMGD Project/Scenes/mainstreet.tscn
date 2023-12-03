@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://7j1re0chkwqd"]
+[gd_scene load_steps=4 format=3 uid="uid://7j1re0chkwqd"]
 
 [ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
-[ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="3_wp3xj"]
-[ext_resource type="Texture2D" uid="uid://d4ltb0cpndon7" path="res://Assets/CharacterSprites/Player-001.png" id="4_12dnp"]
+[ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="3_tixj5"]
 
 [node name="mainstreet" type="Node2D"]
 
@@ -71,16 +70,5 @@ texture_filter = 1
 position = Vector2(398, -99)
 texture = ExtResource("2_rnnmi")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-z_index = 2
-texture_filter = 1
-position = Vector2(179, 85)
-motion_mode = 1
-script = ExtResource("3_wp3xj")
-metadata/moveSpeed = 150.0
-
-[node name="Player_Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("4_12dnp")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(4, 4)
+[node name="Player" parent="." instance=ExtResource("3_tixj5")]
+position = Vector2(198, 100)
