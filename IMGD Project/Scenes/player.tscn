@@ -1,25 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://l4f7apxtcqlk"]
+[gd_scene load_steps=11 format=3 uid="uid://df0agb61paob7"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="1_50ci2"]
 [ext_resource type="Texture2D" uid="uid://cxyw6yh882cdb" path="res://Assets/CharacterSprites/player_spritesheet.png" id="2_fyxi7"]
-[ext_resource type="Animation" uid="uid://c7mnj5koi2k8u" path="res://Assets/CharacterSprites/Animations/Animations/RESET.res" id="3_2e0j0"]
-[ext_resource type="Animation" uid="uid://cwuhuxj1gvina" path="res://Assets/CharacterSprites/Animations/Animations/WalkDown.res" id="4_oqrou"]
-[ext_resource type="Animation" uid="uid://col3bkmbovpy7" path="res://Assets/CharacterSprites/Animations/Animations/WalkLeft.res" id="5_qn26x"]
-[ext_resource type="Animation" uid="uid://bxbuykx2xylq6" path="res://Assets/CharacterSprites/Animations/Animations/WalkRight.res" id="6_3iewm"]
-[ext_resource type="Animation" uid="uid://cr5v1x06i3dud" path="res://Assets/CharacterSprites/Animations/Animations/WalkUp.res" id="7_tycgf"]
+[ext_resource type="Animation" uid="uid://c7mnj5koi2k8u" path="res://Assets/Animations/RESET.res" id="3_7dxb0"]
+[ext_resource type="Animation" uid="uid://cwuhuxj1gvina" path="res://Assets/Animations/WalkDown.res" id="4_1dj77"]
+[ext_resource type="Animation" uid="uid://col3bkmbovpy7" path="res://Assets/Animations/WalkLeft.res" id="5_te7ji"]
+[ext_resource type="Animation" uid="uid://bxbuykx2xylq6" path="res://Assets/Animations/WalkRight.res" id="6_aohhc"]
+[ext_resource type="Animation" uid="uid://cr5v1x06i3dud" path="res://Assets/Animations/WalkUp.res" id="7_jahls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u62sn"]
 size = Vector2(16, 24)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgece"]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_006tv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_khjou"]
 _data = {
-"RESET": ExtResource("3_2e0j0"),
-"WalkDown": ExtResource("4_oqrou"),
-"WalkLeft": ExtResource("5_qn26x"),
-"WalkRight": ExtResource("6_3iewm"),
-"WalkUp": ExtResource("7_tycgf")
+"RESET": ExtResource("3_7dxb0"),
+"WalkDown": ExtResource("4_1dj77"),
+"WalkLeft": ExtResource("5_te7ji"),
+"WalkRight": ExtResource("6_aohhc"),
+"WalkUp": ExtResource("7_jahls")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -46,5 +46,5 @@ debug_color = Color(0.376471, 0.607843, 0.27451, 0.419608)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_vgece"),
-"PlayerAnimations": SubResource("AnimationLibrary_006tv")
+"PlayerAnimations": SubResource("AnimationLibrary_khjou")
 }
