@@ -39,7 +39,7 @@ position = Vector2(-8, 0)
 zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 4)
+position = Vector2(-4, 4)
 shape = SubResource("RectangleShape2D_u62sn")
 debug_color = Color(0.376471, 0.607843, 0.27451, 0.419608)
 
