@@ -1,15 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://7j1re0chkwqd"]
+[gd_scene load_steps=5 format=3 uid="uid://7j1re0chkwqd"]
 
 [ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
 [ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="3_tixj5"]
+[ext_resource type="Texture2D" uid="uid://bfel8qk7f6hry" path="res://Assets/Art/TreeClump.png" id="4_enp1p"]
 
 [node name="mainstreet" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(22, 176)
+position = Vector2(16, 168)
 tile_set = ExtResource("1_uxwn4")
 format = 2
 layer_0/name = "Ground"
@@ -72,3 +73,9 @@ texture = ExtResource("2_rnnmi")
 
 [node name="Player" parent="." instance=ExtResource("3_tixj5")]
 position = Vector2(198, 100)
+
+[node name="TreeClump" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(304, 560)
+texture = ExtResource("4_enp1p")
