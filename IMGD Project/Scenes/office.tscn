@@ -1,38 +1,26 @@
-[gd_scene load_steps=39 format=3 uid="uid://bmhhxe7cti4uf"]
+[gd_scene load_steps=40 format=3 uid="uid://bmhhxe7cti4uf"]
 
 [ext_resource type="TileSet" uid="uid://dkduj4mg3rosj" path="res://Assets/interiortiles.tres" id="1_gx8s6"]
 [ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="2_5a6yd"]
 [ext_resource type="Texture2D" uid="uid://cxyw6yh882cdb" path="res://Assets/CharacterSprites/player_spritesheet.png" id="3_p0ove"]
+[ext_resource type="Animation" uid="uid://c7mnj5koi2k8u" path="res://Assets/CharacterSprites/Animations/Animations/RESET.res" id="4_ihblt"]
+[ext_resource type="Animation" uid="uid://cwuhuxj1gvina" path="res://Assets/CharacterSprites/Animations/Animations/WalkDown.res" id="5_2cuj5"]
+[ext_resource type="Animation" uid="uid://col3bkmbovpy7" path="res://Assets/CharacterSprites/Animations/Animations/WalkLeft.res" id="6_nqi3n"]
+[ext_resource type="Animation" uid="uid://bxbuykx2xylq6" path="res://Assets/CharacterSprites/Animations/Animations/WalkRight.res" id="7_te8bm"]
+[ext_resource type="Animation" uid="uid://cr5v1x06i3dud" path="res://Assets/CharacterSprites/Animations/Animations/WalkUp.res" id="8_dyy55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oox1f"]
 size = Vector2(16, 24)
 
-[sub_resource type="Animation" id="Animation_14rc7"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_tni4i"]
-resource_name = "WalkDown"
-length = 0.2
-
-[sub_resource type="Animation" id="Animation_3bhu3"]
-resource_name = "WalkLeft"
-length = 0.2
-
-[sub_resource type="Animation" id="Animation_2g2wl"]
-resource_name = "WalkRight"
-length = 0.2
-
-[sub_resource type="Animation" id="Animation_3inde"]
-resource_name = "WalkUp"
-length = 0.2
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgece"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_006tv"]
 _data = {
-"RESET": SubResource("Animation_14rc7"),
-"WalkDown": SubResource("Animation_tni4i"),
-"WalkLeft": SubResource("Animation_3bhu3"),
-"WalkRight": SubResource("Animation_2g2wl"),
-"WalkUp": SubResource("Animation_3inde")
+"RESET": ExtResource("4_ihblt"),
+"WalkDown": ExtResource("5_2cuj5"),
+"WalkLeft": ExtResource("6_nqi3n"),
+"WalkRight": ExtResource("7_te8bm"),
+"WalkUp": ExtResource("8_dyy55")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgguv"]
@@ -208,14 +196,15 @@ position = Vector2(-4, 4)
 shape = SubResource("RectangleShape2D_oox1f")
 debug_color = Color(0.376471, 0.607843, 0.27451, 0.419608)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
-libraries = {
-"": SubResource("AnimationLibrary_vgece")
-}
-
 [node name="Player_Sprite" type="Sprite2D" parent="player"]
 texture = ExtResource("3_p0ove")
 hframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+libraries = {
+"": SubResource("AnimationLibrary_vgece"),
+"PlayerAnimations": SubResource("AnimationLibrary_006tv")
+}
 
 [node name="objects" type="StaticBody2D" parent="."]
 

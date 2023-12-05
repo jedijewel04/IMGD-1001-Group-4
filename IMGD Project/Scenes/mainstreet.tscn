@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://7j1re0chkwqd"]
+[gd_scene load_steps=6 format=3 uid="uid://7j1re0chkwqd"]
 
 [ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
 [ext_resource type="PackedScene" uid="uid://l4f7apxtcqlk" path="res://Scenes/player.tscn" id="3_tixj5"]
 [ext_resource type="Texture2D" uid="uid://bfel8qk7f6hry" path="res://Assets/Art/TreeClump.png" id="4_enp1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3oxj"]
 
 [node name="mainstreet" type="Node2D"]
 
@@ -79,3 +81,8 @@ texture_filter = 1
 texture_repeat = 1
 position = Vector2(304, 560)
 texture = ExtResource("4_enp1p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_g3oxj")
