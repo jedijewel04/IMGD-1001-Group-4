@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmhhxe7cti4uf"]
 
 [ext_resource type="TileSet" uid="uid://dkduj4mg3rosj" path="res://Assets/interiortiles.tres" id="1_gx8s6"]
-[ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="2_pgfk3"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="2_pgfk3"]
 
 [node name="office" type="Node2D"]
 z_index = 1
