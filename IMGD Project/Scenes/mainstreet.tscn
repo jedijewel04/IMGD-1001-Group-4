@@ -72,7 +72,7 @@ position = Vector2(398, -99)
 texture = ExtResource("2_rnnmi")
 
 [node name="Player" parent="." instance=ExtResource("3_tixj5")]
-position = Vector2(198, 100)
+position = Vector2(184, 104)
 
 [node name="TreeClump" type="Sprite2D" parent="."]
 texture_filter = 1
