@@ -33,19 +33,19 @@ public partial class playerMover : CharacterBody2D
 		// Update the animations:
 		if (Input.IsActionPressed("move_down")) 
 		{
-			_animationPlayer.Play("WalkDown");
+			_animationPlayer.Play("PlayerAnimations/WalkDown");
 		}
 		else if (Input.IsActionPressed("move_up")) 
 		{
-			_animationPlayer.Play("WalkUp");
+			_animationPlayer.Play("PlayerAnimations/WalkUp");
 		}
 		else if (Input.IsActionPressed("move_right")) 
 		{
-			_animationPlayer.Play("WalkRight");
+			_animationPlayer.Play("PlayerAnimations/WalkRight");
 		}
 		else if (Input.IsActionPressed("move_left")) 
 		{
-			_animationPlayer.Play("WalkLeft");
+			_animationPlayer.Play("PlayerAnimations/WalkLeft");
 		}
 		else 
 		{

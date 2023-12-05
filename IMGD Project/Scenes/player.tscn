@@ -1,97 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://df0agb61paob7"]
+[gd_scene load_steps=11 format=3 uid="uid://df0agb61paob7"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/playerMover.cs" id="1_50ci2"]
 [ext_resource type="Texture2D" uid="uid://cxyw6yh882cdb" path="res://Assets/CharacterSprites/player_spritesheet.png" id="2_fyxi7"]
+[ext_resource type="Animation" uid="uid://c7mnj5koi2k8u" path="res://Assets/Animations/RESET.res" id="3_7dxb0"]
+[ext_resource type="Animation" uid="uid://cwuhuxj1gvina" path="res://Assets/Animations/WalkDown.res" id="4_1dj77"]
+[ext_resource type="Animation" uid="uid://col3bkmbovpy7" path="res://Assets/Animations/WalkLeft.res" id="5_te7ji"]
+[ext_resource type="Animation" uid="uid://bxbuykx2xylq6" path="res://Assets/Animations/WalkRight.res" id="6_aohhc"]
+[ext_resource type="Animation" uid="uid://cr5v1x06i3dud" path="res://Assets/Animations/WalkUp.res" id="7_jahls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u62sn"]
 size = Vector2(16, 24)
 
-[sub_resource type="Animation" id="Animation_14rc7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_tni4i"]
-resource_name = "WalkDown"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_3bhu3"]
-resource_name = "WalkLeft"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-
-[sub_resource type="Animation" id="Animation_2g2wl"]
-resource_name = "WalkRight"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_3inde"]
-resource_name = "WalkUp"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [9, 10, 11]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgece"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_khjou"]
 _data = {
-"RESET": SubResource("Animation_14rc7"),
-"WalkDown": SubResource("Animation_tni4i"),
-"WalkLeft": SubResource("Animation_3bhu3"),
-"WalkRight": SubResource("Animation_2g2wl"),
-"WalkUp": SubResource("Animation_3inde")
+"RESET": ExtResource("3_7dxb0"),
+"WalkDown": ExtResource("4_1dj77"),
+"WalkLeft": ExtResource("5_te7ji"),
+"WalkRight": ExtResource("6_aohhc"),
+"WalkUp": ExtResource("7_jahls")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -111,11 +39,12 @@ position = Vector2(-8, 0)
 zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 4)
+position = Vector2(-4, 4)
 shape = SubResource("RectangleShape2D_u62sn")
 debug_color = Color(0.376471, 0.607843, 0.27451, 0.419608)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_vgece")
+"": SubResource("AnimationLibrary_vgece"),
+"PlayerAnimations": SubResource("AnimationLibrary_khjou")
 }
