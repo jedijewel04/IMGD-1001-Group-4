@@ -3,10 +3,12 @@ player: Hi Veronica
 [wait time="2.0"]
 join Veronica 1
 Veronica: What is your name?
-[text_input var="PlayerName" default="My name is..."]
-Veronica: How is your day going?
+[text_input var="PlayerName" placeholder="My name is..."]
+Veronica: Hi there [PlayerName]!
 Veronica: How is your day going?
 - It's fine I guess
+	[update_position vector="Vector2(0, -3)" time="0.0"]
 	Veronica: That's good
 - It sucks
+	[update_position vector="Vector2(0, -3)" time="0.0"]
 	Veronica: Damn ok
