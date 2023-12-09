@@ -19,13 +19,46 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
+[dialogic]
+
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+variables={
+"PlayerName": ""
+}
+layout/styles={
+"Default": {
+"export_overrides": {
+"box_modulate": "Color(0.988235, 0.835294, 0.682353, 1)"
+},
+"layout": "res://addons/dialogic/Modules/DefaultLayouts/Default/DialogicDefaultLayout.tscn"
+}
+}
+layout/default_style="Default"
+glossary/default_case_sensitive=true
+glossary/glossary_files=["res://Dialogic Assets/New_File.tres"]
+
 [dotnet]
 
 project/assembly_name="IMGD Group 4 Game"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [input]
 

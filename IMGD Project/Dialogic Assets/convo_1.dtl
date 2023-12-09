@@ -1,0 +1,12 @@
+join player 1
+player: Hi Veronica
+[wait time="2.0"]
+join Veronica 1
+Veronica: What is your name?
+[text_input var="PlayerName" default="My name is..."]
+Veronica: How is your day going?
+Veronica: How is your day going?
+- It's fine I guess
+	Veronica: That's good
+- It sucks
+	Veronica: Damn ok
