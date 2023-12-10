@@ -38,13 +38,12 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={
-"PlayerName": ""
+"PlayerName": "You"
 }
 layout/styles={
 "Default": {
-"export_overrides": {
-"box_modulate": "Color(0.988235, 0.835294, 0.682353, 1)"
-},
+"export_overrides": {},
+"inherits": "",
 "layout": "res://addons/dialogic/Modules/DefaultLayouts/Default/DialogicDefaultLayout.tscn"
 }
 }
