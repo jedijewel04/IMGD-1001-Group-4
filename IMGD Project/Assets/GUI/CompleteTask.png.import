@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jqex84l8uqac"
-path="res://.godot/imported/Modern_UI_Style_2.png-328e65577e705d0fa032790c09ddd4c8.ctex"
+uid="uid://x5dv3hc66qqq"
+path="res://.godot/imported/CompleteTask.png-06af7e86636c7a4b482fb9f48950480e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/Modern_UI_Style_2.png"
-dest_files=["res://.godot/imported/Modern_UI_Style_2.png-328e65577e705d0fa032790c09ddd4c8.ctex"]
+source_file="res://Assets/GUI/CompleteTask.png"
+dest_files=["res://.godot/imported/CompleteTask.png-06af7e86636c7a4b482fb9f48950480e.ctex"]
 
 [params]
 

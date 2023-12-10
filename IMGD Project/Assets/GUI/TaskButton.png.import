@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sco77a1v8evc"
-path="res://.godot/imported/UI_Frame.png-eaf6345f0869cc991c4e76c4219ab70c.ctex"
+uid="uid://d1vtfvbbytgun"
+path="res://.godot/imported/TaskButton.png-b5f342d19d35d26ea51845cbf49ffdf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI/UI_Frame.png"
-dest_files=["res://.godot/imported/UI_Frame.png-eaf6345f0869cc991c4e76c4219ab70c.ctex"]
+source_file="res://Assets/GUI/TaskButton.png"
+dest_files=["res://.godot/imported/TaskButton.png-b5f342d19d35d26ea51845cbf49ffdf5.ctex"]
 
 [params]
 
