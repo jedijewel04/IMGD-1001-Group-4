@@ -5,12 +5,16 @@ public partial class playerMover : CharacterBody2D
 {
 	public int WalkSpeed { get; set; } = 100;
 	public int SprintSpeed { get; set; } = 200;
+	CanvasLayer HUD;
+	Script HUDScript;
 	
 	private AnimationPlayer _animationPlayer;
 
 	public override void _Ready()
 	{
 		_animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+		HUD = GetNode<CanvasLayer>("HUD");
+		HUDScript = HUD.GetScript("HUD.cs");
 	}
 	
 	public void GetInput()
