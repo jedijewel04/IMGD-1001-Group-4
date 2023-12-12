@@ -3,18 +3,20 @@ using System;
 
 public partial class playerMover : CharacterBody2D
 {
+	Global global;
 	public int WalkSpeed { get; set; } = 100;
 	public int SprintSpeed { get; set; } = 200;
-	CanvasLayer HUD;
-	Script HUDScript;
-	
+	bool canPlayerMove;
 	private AnimationPlayer _animationPlayer;
+	private TextureButton completeTaskButton;
 
 	public override void _Ready()
 	{
+		global = GetNode<Global>("/root/Global");
 		_animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
-		HUD = GetNode<CanvasLayer>("HUD");
-		HUDScript = HUD.GetScript("HUD.cs");
+		canPlayerMove = global.canPlayerMove;
+		Node HUD = GetNode("/root/HUD");
+		completeTaskButton = HUD.GetNode<TextureButton>("CompleteTaskButton");
 	}
 	
 	public void GetInput()
@@ -30,30 +32,59 @@ public partial class playerMover : CharacterBody2D
 
 	public override void _PhysicsProcess(double  _delta)
 	{
-		// Move the player:
-		GetInput();
-		MoveAndSlide();
-		
-		// Update the animations:
-		if (Input.IsActionPressed("move_down")) 
-		{
-			_animationPlayer.Play("PlayerAnimations/WalkDown");
-		}
-		else if (Input.IsActionPressed("move_up")) 
-		{
-			_animationPlayer.Play("PlayerAnimations/WalkUp");
-		}
-		else if (Input.IsActionPressed("move_right")) 
-		{
-			_animationPlayer.Play("PlayerAnimations/WalkRight");
-		}
-		else if (Input.IsActionPressed("move_left")) 
-		{
-			_animationPlayer.Play("PlayerAnimations/WalkLeft");
-		}
-		else 
-		{
-			_animationPlayer.Stop();
+		if (canPlayerMove) {
+			// Move the player:
+			GetInput();
+			MoveAndSlide();
+			
+			// Update the animations:
+			if (Input.IsActionPressed("move_down")) 
+			{
+				_animationPlayer.Play("PlayerAnimations/WalkDown");
+			}
+			else if (Input.IsActionPressed("move_up")) 
+			{
+				_animationPlayer.Play("PlayerAnimations/WalkUp");
+			}
+			else if (Input.IsActionPressed("move_right")) 
+			{
+				_animationPlayer.Play("PlayerAnimations/WalkRight");
+			}
+			else if (Input.IsActionPressed("move_left")) 
+			{
+				_animationPlayer.Play("PlayerAnimations/WalkLeft");
+			}
+			else 
+			{
+				_animationPlayer.Stop();
+			}
 		}
 	}
+	
+	// Computer task:
+	private void _on_computer_task_body_entered(Node2D body)
+	{
+		completeTaskButton.Visible = true;
+		global.currentTask = "send_email";
+	}
+	private void _on_computer_task_body_exited(Node2D body)
+	{
+		completeTaskButton.Visible = false;
+		global.currentTask = null;
+	}
+
+	// Coffee task: 
+	private void _on_coffee_task_body_entered(Node2D body)
+	{
+		completeTaskButton.Visible = true;
+		global.currentTask = "drink_coffee";
+	}
+	private void _on_coffee_task_body_exited(Node2D body)
+	{
+		completeTaskButton.Visible = true;
+		global.currentTask = null;
+	}
 }
+
+
+

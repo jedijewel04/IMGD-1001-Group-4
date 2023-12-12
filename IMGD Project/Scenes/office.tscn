@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmhhxe7cti4uf"]
+[gd_scene load_steps=6 format=3 uid="uid://bmhhxe7cti4uf"]
 
 [ext_resource type="TileSet" uid="uid://dkduj4mg3rosj" path="res://Assets/interiortiles.tres" id="1_gx8s6"]
 [ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="2_pgfk3"]
-[ext_resource type="Script" path="res://Assets/Scripts/ClickableArea.cs" id="3_fu4lx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2kb"]
-size = Vector2(49, 46)
+size = Vector2(56.5, 38.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k45vm"]
+size = Vector2(112, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eycl"]
+size = Vector2(66, 48)
 
 [node name="office" type="Node2D"]
 z_index = 1
@@ -89,11 +94,45 @@ layer_9/tile_data = PackedInt32Array(-327689, 2, 8, -262153, 2, 9, -655369, 2, 8
 y_sort_enabled = true
 position = Vector2(-225, -159)
 
-[node name="Computer_Task" type="Area2D" parent="."]
-position = Vector2(-325, -84)
+[node name="Task_Collision_Boxes" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer_Task"]
+[node name="Computer_Task" type="Area2D" parent="Task_Collision_Boxes"]
 z_index = 2
-position = Vector2(-2.5, 13)
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Computer_Task"]
+z_index = 2
+position = Vector2(1.25, 16.75)
 shape = SubResource("RectangleShape2D_sm2kb")
-script = ExtResource("3_fu4lx")
+
+[node name="Coffee_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Coffee_Task"]
+z_index = 2
+position = Vector2(117, -107.5)
+shape = SubResource("RectangleShape2D_sm2kb")
+
+[node name="Meeting_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Meeting_Task"]
+z_index = 2
+position = Vector2(-98, 52)
+shape = SubResource("RectangleShape2D_k45vm")
+
+[node name="Toilet_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Toilet_Task"]
+z_index = 2
+position = Vector2(357, 76)
+shape = SubResource("RectangleShape2D_3eycl")
+
+[connection signal="body_entered" from="Task_Collision_Boxes/Computer_Task" to="Player" method="_on_computer_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Computer_Task" to="Player" method="_on_computer_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_exited"]

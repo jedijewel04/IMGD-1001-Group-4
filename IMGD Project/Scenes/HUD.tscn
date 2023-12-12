@@ -1,21 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cox7jt54ssvd8"]
+[gd_scene load_steps=12 format=3 uid="uid://cox7jt54ssvd8"]
 
-[ext_resource type="Texture2D" uid="uid://x5dv3hc66qqq" path="res://Assets/GUI/CompleteTask.png" id="1_31ej0"]
 [ext_resource type="Script" path="res://Assets/Scripts/HUD.cs" id="1_nbeb8"]
 [ext_resource type="Texture2D" uid="uid://bbuo7xfsj5y30" path="res://Assets/GUI/TaskList.png" id="2_mgl1t"]
 [ext_resource type="Texture2D" uid="uid://d1vtfvbbytgun" path="res://Assets/GUI/TaskButton.png" id="3_eylj7"]
+[ext_resource type="Texture2D" uid="uid://dc3rcryxksugr" path="res://Assets/GUI/send_email.png" id="4_cco50"]
+[ext_resource type="Texture2D" uid="uid://c8jxgxinkikvt" path="res://Assets/GUI/use_toilet.png" id="5_7phys"]
+[ext_resource type="Texture2D" uid="uid://513uwiqp2fpl" path="res://Assets/GUI/drink_coffee.png" id="6_7vn01"]
+[ext_resource type="Texture2D" uid="uid://c88pbplraibqw" path="res://Assets/GUI/get_snack.png" id="7_axcky"]
+[ext_resource type="Texture2D" uid="uid://csfqwguqswlu7" path="res://Assets/GUI/introduce.png" id="8_og1ps"]
+[ext_resource type="Texture2D" uid="uid://boqlg165d8fu2" path="res://Assets/GUI/attend_meeting.png" id="9_fjhjw"]
+[ext_resource type="Texture2D" uid="uid://bugnmt5bit3jm" path="res://Assets/GUI/print_documents.png" id="10_x6lqq"]
+[ext_resource type="Texture2D" uid="uid://bx6nm2bj4r7q5" path="res://Assets/GUI/complete_task.png" id="11_4or7v"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_nbeb8")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-texture_filter = 1
-offset_left = 298.0
-offset_top = 162.0
-offset_right = 378.0
-offset_bottom = 210.0
-texture = ExtResource("1_31ej0")
 
 [node name="Expanded_Tasks" type="TextureRect" parent="."]
 visible = false
@@ -26,15 +24,64 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -80.0
-offset_right = 88.0
-offset_bottom = 80.0
+offset_left = -448.0
+offset_top = -400.0
+offset_right = 432.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_mgl1t")
+
+[node name="send_email_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 880.0
+offset_bottom = 800.0
+texture = ExtResource("4_cco50")
+
+[node name="use_toilet_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_7phys")
+
+[node name="drink_coffee_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_7vn01")
+
+[node name="get_snack_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_axcky")
+
+[node name="introduce_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_og1ps")
+
+[node name="attend_meeting_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_fjhjw")
+
+[node name="print_documents_crossed" type="TextureRect" parent="Expanded_Tasks"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_x6lqq")
 
 [node name="TaskButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -61,4 +108,14 @@ offset_right = 1536.0
 offset_bottom = 864.0
 color = Color(0, 0, 0, 1)
 
+[node name="CompleteTaskButton" type="TextureButton" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 1147.0
+offset_top = 481.0
+offset_right = 1547.0
+offset_bottom = 676.0
+texture_normal = ExtResource("11_4or7v")
+
 [connection signal="pressed" from="TaskButton" to="." method="_on_task_button_pressed"]
+[connection signal="pressed" from="CompleteTaskButton" to="." method="_on_complete_task_button_pressed"]

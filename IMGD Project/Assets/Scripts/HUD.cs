@@ -4,11 +4,18 @@ using System.Threading;
 
 public partial class HUD : CanvasLayer
 {
+	Global global;
 	TextureRect taskList;
 	TextureButton taskButton;
+
+	// Tasks:
+	// think about making this arrays or something better instead.. hardcoding it sucks
+	TextureRect sendEmailCrossed;
+	TextureRect drinkCoffeeCrossed;
+
 	ColorRect fade;
 	
-	bool playerCanMove = true;
+	bool canPlayerMove;
 
 	bool taskList_open = false;
 
@@ -16,9 +23,13 @@ public partial class HUD : CanvasLayer
 	
 	public override void _Ready() 
 	{
+		global = GetNode<Global>("/root/Global");
 		taskList = GetNode<TextureRect>("Expanded_Tasks");
 		taskButton = GetNode<TextureButton>("TaskButton");
 		fade = GetNode<ColorRect>("Fade");
+		canPlayerMove = global.canPlayerMove;
+		sendEmailCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/send_email_crossed");
+		drinkCoffeeCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/drink_coffee_crossed");
 	}
 
 	private void _on_task_button_pressed()
@@ -26,15 +37,28 @@ public partial class HUD : CanvasLayer
 		if (taskList_open == true) {
 			taskList.Visible = false;
 			taskList_open = false;
-			playerCanMove = true;
+			canPlayerMove = true;
 		}
 		else {
 			taskList.Visible = true;
 			taskList_open = true;
-			playerCanMove = false;
+			canPlayerMove = false;
 		}
 
 		//fadeBackground(fade, taskList_open);
+	}
+
+	private void _on_complete_task_button_pressed()
+	{
+		GD.Print("Completed task!");
+		GD.Print(global.currentTask);
+
+		if (global.currentTask == "send_email") {
+			sendEmailCrossed.Visible = true;
+		}
+		else if (global.currentTask == "drink_coffee") {
+			drinkCoffeeCrossed.Visible = true;
+		}
 	}
 
 	public override void _PhysicsProcess(double delta)
