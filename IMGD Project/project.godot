@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+HUD="*res://Scenes/HUD.tscn"
+Global="*res://Assets/Scripts/Global.cs"
 
 [dialogic]
 
@@ -50,6 +52,12 @@ layout/styles={
 layout/default_style="Default"
 glossary/default_case_sensitive=true
 glossary/glossary_files=["res://Dialogic Assets/New_File.tres"]
+
+[display]
+
+window/size/viewport_width=1536
+window/size/viewport_height=864
+window/size/resizable=false
 
 [dotnet]
 
@@ -100,3 +108,5 @@ dialogic_default_action={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
