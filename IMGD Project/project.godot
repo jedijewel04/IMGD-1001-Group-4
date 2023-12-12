@@ -57,7 +57,7 @@ project/assembly_name="IMGD Group 4 Game"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
