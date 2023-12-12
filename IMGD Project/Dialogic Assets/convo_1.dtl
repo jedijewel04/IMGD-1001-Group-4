@@ -1,15 +1,20 @@
 join Player 1
-Player: Hi Veronica
+Player: Hey there, I'm a new employee here and today is my first day on the job. Nice to meet you!
 [wait time="2.0"]
 join Veronica 1
-Veronica: What is your name?
+Veronica: Hi! I'm Veronica, and I'm one of the managers here at G-Neric. What is your name?
 [text_input var="PlayerName" placeholder="My name is..."]
-Veronica: Hi there {PlayerName}!
-Player: Hey, it is nice to meet you.
-Veronica: How is your day going?
-- It's fine I guess
+Veronica: Okay, hey {PlayerName}!
+Player: It's really nice to meet you. I'm really looking forward to working here, especially because this is my first position at such an established company!
+Veronica: Haha, yeah, we're really excited to have you!
+Veronica: Have you seen your task list yet?
+- Yeah, I have
 	[update_position vector="Vector2(0, -3)" time="0.0"]
-	Veronica: That's good
-- It sucks
+	Veronica: Awesome! Get started on them as soon you can, and then come back and talk to me once you've finished.
+- No, I haven't
 	[update_position vector="Vector2(0, -3)" time="0.0"]
-	Veronica: Damn ok
+	Veronica: Make sure to look at it! (Accessible in the bottom-right corner).
+- Yeah, I've already completed a few!
+	[update_position vector="Vector2(0, -3)" time="0.0"]
+	Veronica: That's great. Keep it up!
+set {timesSpokenToVeronica} += 1

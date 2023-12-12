@@ -7,16 +7,18 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "icon",
+"default_portrait": "Protagonist_Profile",
 "description": "This is the main character and the player.",
 "display_name": "{PlayerName}",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"icon": {
-"ignore_char_scale": false,
-"image": "res:///icon.svg",
+"Protagonist_Profile": {
+"export_overrides": {
+"image": "\"\""
+},
+"image": "res://Assets/CharacterProfiles/Protagonist_Profile.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 0.5,
