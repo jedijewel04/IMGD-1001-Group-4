@@ -60,30 +60,28 @@ public partial class playerMover : CharacterBody2D
 			}
 		}
 	}
-	
-	// Computer task:
-	private void _on_computer_task_body_entered(Node2D body)
-	{
+
+	private void body_entered(String currTask) {
 		completeTaskButton.Visible = true;
-		global.currentTask = "send_email";
+		global.currentTask = currTask;
 	}
-	private void _on_computer_task_body_exited(Node2D body)
-	{
+
+	private void body_exited() {
 		completeTaskButton.Visible = false;
 		global.currentTask = null;
 	}
+	
+	private void _on_computer_task_body_entered(Node2D body) { body_entered("send_email"); }
+	private void _on_computer_task_body_exited(Node2D body) { body_exited(); }
 
-	// Coffee task: 
-	private void _on_coffee_task_body_entered(Node2D body)
-	{
-		completeTaskButton.Visible = true;
-		global.currentTask = "drink_coffee";
-	}
-	private void _on_coffee_task_body_exited(Node2D body)
-	{
-		completeTaskButton.Visible = true;
-		global.currentTask = null;
-	}
+	private void _on_coffee_task_body_entered(Node2D body) { body_entered("drink_coffee"); }
+	private void _on_coffee_task_body_exited(Node2D body) { body_exited(); }
+
+	private void _on_meeting_task_body_entered(Node2D body) { body_entered("meeting"); }
+	private void _on_meeting_task_body_exited(Node2D body) { body_exited(); }
+
+	private void _on_toilet_task_body_entered(Node2D body) { body_entered("use_toilet"); }
+	private void _on_toilet_task_body_exited(Node2D body) { body_exited(); }
 }
 
 

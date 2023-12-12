@@ -12,6 +12,8 @@ public partial class HUD : CanvasLayer
 	// think about making this arrays or something better instead.. hardcoding it sucks
 	TextureRect sendEmailCrossed;
 	TextureRect drinkCoffeeCrossed;
+	TextureRect meetingCrossed;
+	TextureRect useToiletCrossed;
 
 	ColorRect fade;
 	
@@ -30,6 +32,8 @@ public partial class HUD : CanvasLayer
 		canPlayerMove = global.canPlayerMove;
 		sendEmailCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/send_email_crossed");
 		drinkCoffeeCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/drink_coffee_crossed");
+		meetingCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/attend_meeting_crossed");
+		useToiletCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/use_toilet_crossed");
 	}
 
 	private void _on_task_button_pressed()
@@ -50,14 +54,17 @@ public partial class HUD : CanvasLayer
 
 	private void _on_complete_task_button_pressed()
 	{
-		GD.Print("Completed task!");
-		GD.Print(global.currentTask);
-
 		if (global.currentTask == "send_email") {
 			sendEmailCrossed.Visible = true;
 		}
 		else if (global.currentTask == "drink_coffee") {
 			drinkCoffeeCrossed.Visible = true;
+		}
+		else if (global.currentTask == "meeting") {
+			meetingCrossed.Visible = true;
+		}
+		else if (global.currentTask == "use_toilet") {
+			useToiletCrossed.Visible = true;
 		}
 	}
 

@@ -136,3 +136,7 @@ shape = SubResource("RectangleShape2D_3eycl")
 [connection signal="body_exited" from="Task_Collision_Boxes/Computer_Task" to="Player" method="_on_computer_task_body_exited"]
 [connection signal="body_entered" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_entered"]
 [connection signal="body_exited" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Meeting_Task" to="Player" method="_on_meeting_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Meeting_Task" to="Player" method="_on_meeting_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Toilet_Task" to="Player" method="_on_toilet_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Toilet_Task" to="Player" method="_on_toilet_task_body_exited"]
