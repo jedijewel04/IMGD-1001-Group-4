@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7j1re0chkwqd"]
+[gd_scene load_steps=10 format=3 uid="uid://7j1re0chkwqd"]
 
 [ext_resource type="TileSet" uid="uid://bly0leyxnvjqq" path="res://Assets/exteriortiles.tres" id="1_uxwn4"]
 [ext_resource type="Texture2D" uid="uid://ct47c7rpix3hr" path="res://Assets/dog.png" id="2_rnnmi"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dwdxlc0wt43hd" path="res://Assets/Art/TreeClump3x2 Flipped.png" id="6_72isr"]
 [ext_resource type="Texture2D" uid="uid://2o6tvayeglnl" path="res://Assets/Art/ME_Singles_Camping_16x16_Tree_182.png" id="7_koxrj"]
 [ext_resource type="Texture2D" uid="uid://da67vfh0yrj6l" path="res://Assets/Art/ME_Singles_Camping_16x16_Tree_206.png" id="8_27bdn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tva2x"]
+size = Vector2(48, 20)
 
 [node name="mainstreet" type="Node2D"]
 
@@ -104,7 +107,7 @@ position = Vector2(398, -99)
 texture = ExtResource("2_rnnmi")
 
 [node name="Player" parent="." instance=ExtResource("3_tixj5")]
-position = Vector2(184, 104)
+position = Vector2(-336, -464)
 
 [node name="TreeSprites" type="Node" parent="."]
 
@@ -1285,3 +1288,15 @@ z_index = 3
 texture_filter = 1
 position = Vector2(1097, 149)
 texture = ExtResource("7_koxrj")
+
+[node name="EntranceToOffice" type="Area2D" parent="."]
+z_index = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EntranceToOffice"]
+z_index = 2
+z_as_relative = false
+position = Vector2(1080, 656)
+shape = SubResource("RectangleShape2D_tva2x")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="body_entered" from="EntranceToOffice" to="Player" method="_on_entrance_to_office_body_entered"]

@@ -1,11 +1,16 @@
 join Player 1
 Player: Hey there, I'm a new employee here and today is my first day on the job. Nice to meet you!
 [wait time="2.0"]
+leave Player
 join Veronica 1
 Veronica: Hi! I'm Veronica, and I'm one of the managers here at G-Neric. What is your name?
 [text_input var="PlayerName" placeholder="My name is..."]
 Veronica: Okay, hey {PlayerName}!
+leave Veronica
+join Player 1
 Player: It's really nice to meet you. I'm really looking forward to working here, especially because this is my first position at such an established company!
+leave Player
+join Veronica 1
 Veronica: Haha, yeah, we're really excited to have you!
 Veronica: Have you seen your task list yet?
 - Yeah, I have

@@ -24,3 +24,9 @@ func _startZaynDialog():
 	else:
 		var dialog = Dialogic.start("convo_2")
 	# add_child(dialog)
+
+func _startZoeDialog():
+	if (Dialogic.VAR.timesSpokenToVeronica == 0):
+		var dialog = Dialogic.start("convo_6")
+	else:
+		var dialog = Dialogic.start("convo_7")

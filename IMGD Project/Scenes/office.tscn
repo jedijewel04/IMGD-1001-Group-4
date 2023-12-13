@@ -1,25 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://bmhhxe7cti4uf"]
+[gd_scene load_steps=33 format=3 uid="uid://bmhhxe7cti4uf"]
 
 [ext_resource type="TileSet" uid="uid://dkduj4mg3rosj" path="res://Assets/interiortiles.tres" id="1_gx8s6"]
 [ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="2_pgfk3"]
 [ext_resource type="Texture2D" uid="uid://b6730veu720wl" path="res://Assets/Art/Zayn_front.png" id="3_vtfx5"]
 [ext_resource type="Texture2D" uid="uid://bkb7p0vgdy75j" path="res://Assets/Art/Zoe_front.png" id="4_svs4q"]
 [ext_resource type="Texture2D" uid="uid://xqlpq6v87bpi" path="res://Assets/Art/Veronica_front.png" id="5_xsrjh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2kb"]
-size = Vector2(56.5, 38.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k45vm"]
-size = Vector2(112, 160)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eycl"]
-size = Vector2(66, 48)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqa2w"]
-size = Vector2(51, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k18e3"]
-size = Vector2(55, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rtoxd"]
 size = Vector2(634.5, 6)
@@ -69,8 +54,38 @@ size = Vector2(108, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_naaov"]
 size = Vector2(252, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rls0"]
+size = Vector2(82, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfp0m"]
+size = Vector2(13, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fluh7"]
+size = Vector2(107, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxttu"]
+size = Vector2(62, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2kb"]
+size = Vector2(56.5, 38.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k45vm"]
+size = Vector2(112, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eycl"]
+size = Vector2(66, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqa2w"]
+size = Vector2(51, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k18e3"]
+size = Vector2(55, 46)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwvrg"]
 size = Vector2(61, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aw6y"]
+size = Vector2(74, 30)
 
 [node name="office" type="Node2D"]
 z_index = 1
@@ -153,83 +168,6 @@ layer_9/tile_data = PackedInt32Array(-327689, 2, 8, -262153, 2, 9, -655369, 2, 8
 [node name="Player" parent="VisibleSprites" instance=ExtResource("2_pgfk3")]
 y_sort_enabled = true
 position = Vector2(-209, 65)
-
-[node name="Task_Collision_Boxes" type="Node" parent="."]
-
-[node name="Computer_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Computer_Task"]
-z_index = 2
-position = Vector2(1.25, 16.75)
-shape = SubResource("RectangleShape2D_sm2kb")
-
-[node name="Coffee_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Coffee_Task"]
-z_index = 2
-position = Vector2(117, -104)
-shape = SubResource("RectangleShape2D_sm2kb")
-
-[node name="Meeting_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Meeting_Task"]
-visible = false
-z_index = 2
-position = Vector2(-98, 52)
-shape = SubResource("RectangleShape2D_k45vm")
-
-[node name="Toilet_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Toilet_Task"]
-z_index = 2
-position = Vector2(357, 76)
-shape = SubResource("RectangleShape2D_3eycl")
-
-[node name="Snack_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Snack_Task"]
-z_index = 2
-position = Vector2(518, 84)
-shape = SubResource("RectangleShape2D_3eycl")
-
-[node name="Printer_Task" type="Area2D" parent="Task_Collision_Boxes"]
-z_index = 2
-position = Vector2(-365, -84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Printer_Task"]
-z_index = 2
-position = Vector2(15.5, 99)
-shape = SubResource("RectangleShape2D_aqa2w")
-
-[node name="ZoeSprite" type="Sprite2D" parent="."]
-z_index = 2
-texture_filter = 1
-position = Vector2(-295, -188)
-texture = ExtResource("4_svs4q")
-
-[node name="Veronica" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Veronica"]
-z_index = 2
-position = Vector2(-315.5, 70)
-shape = SubResource("RectangleShape2D_k18e3")
-debug_color = Color(0.909804, 0, 0.72549, 0.419608)
-
-[node name="VeronicaSprite" type="Sprite2D" parent="Veronica"]
-z_index = 2
-texture_filter = 1
-position = Vector2(-325, 60)
-texture = ExtResource("5_xsrjh")
 
 [node name="Colliders" type="StaticBody2D" parent="."]
 z_index = 2
@@ -342,6 +280,119 @@ position = Vector2(-229, -213)
 shape = SubResource("RectangleShape2D_naaov")
 debug_color = Color(0, 0.647059, 0.239216, 0.419608)
 
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-152, 22)
+shape = SubResource("RectangleShape2D_7rls0")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-71, 65.25)
+shape = SubResource("RectangleShape2D_wfp0m")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-157.5, -99)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-309, -146)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-309, -78)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-162, -180)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-224, -210)
+shape = SubResource("RectangleShape2D_uxttu")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="Task_Collision_Boxes" type="Node" parent="."]
+
+[node name="Computer_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Computer_Task"]
+z_index = 2
+position = Vector2(1.25, 16.75)
+shape = SubResource("RectangleShape2D_sm2kb")
+
+[node name="Coffee_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Coffee_Task"]
+z_index = 2
+position = Vector2(117, -104)
+shape = SubResource("RectangleShape2D_sm2kb")
+
+[node name="Meeting_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Meeting_Task"]
+visible = false
+z_index = 2
+position = Vector2(-98, 52)
+shape = SubResource("RectangleShape2D_k45vm")
+
+[node name="Toilet_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Toilet_Task"]
+z_index = 2
+position = Vector2(357, 76)
+shape = SubResource("RectangleShape2D_3eycl")
+
+[node name="Snack_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Snack_Task"]
+z_index = 2
+position = Vector2(518, 84)
+shape = SubResource("RectangleShape2D_3eycl")
+
+[node name="Printer_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Printer_Task"]
+z_index = 2
+position = Vector2(15.5, 99)
+shape = SubResource("RectangleShape2D_aqa2w")
+
+[node name="Veronica" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Veronica"]
+z_index = 2
+position = Vector2(-315.5, 70)
+shape = SubResource("RectangleShape2D_k18e3")
+debug_color = Color(0.909804, 0, 0.72549, 0.419608)
+
+[node name="VeronicaSprite" type="Sprite2D" parent="Veronica"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-325, 60)
+texture = ExtResource("5_xsrjh")
+
 [node name="Zayn" type="Area2D" parent="."]
 
 [node name="ZaynSprite" type="Sprite2D" parent="Zayn"]
@@ -354,6 +405,20 @@ texture = ExtResource("3_vtfx5")
 z_index = 2
 position = Vector2(-63, 10)
 shape = SubResource("RectangleShape2D_dwvrg")
+debug_color = Color(0.909804, 0, 0.72549, 0.419608)
+
+[node name="Zoe" type="Area2D" parent="."]
+
+[node name="ZoeSprite" type="Sprite2D" parent="Zoe"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-295, -188)
+texture = ExtResource("4_svs4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zoe"]
+z_index = 2
+position = Vector2(-293, -183)
+shape = SubResource("RectangleShape2D_4aw6y")
 debug_color = Color(0.909804, 0, 0.72549, 0.419608)
 
 [connection signal="area_entered" from="Task_Collision_Boxes/Computer_Task" to="VisibleSprites/Player" method="_on_computer_task_area_entered"]
@@ -373,3 +438,5 @@ debug_color = Color(0.909804, 0, 0.72549, 0.419608)
 [connection signal="body_exited" from="Veronica" to="VisibleSprites/Player" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Zayn" to="VisibleSprites/Player" method="_on_zayn_body_entered"]
 [connection signal="body_exited" from="Zayn" to="VisibleSprites/Player" method="_on_zayn_body_exited"]
+[connection signal="body_entered" from="Zoe" to="VisibleSprites/Player" method="_on_zoe_body_entered"]
+[connection signal="body_exited" from="Zoe" to="VisibleSprites/Player" method="_on_zoe_body_exited"]

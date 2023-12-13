@@ -145,13 +145,8 @@ public partial class playerMover : CharacterBody2D
 	
 	private void _on_zayn_body_entered(Node2D body)
 	{
-		//if (global.introduceCrossed.Visible == false) {
-		//	body_entered_helper("talk_to_zayn");
-		//}
-		//else {
-			speakButton.Visible = true;
-			global.currentTask = "talk_to_zayn";
-		//}
+		speakButton.Visible = true;
+		global.currentTask = "talk_to_zayn";
 	}
 	private void _on_zayn_body_exited(Node2D body)
 	{
@@ -159,4 +154,20 @@ public partial class playerMover : CharacterBody2D
 		speakButton.Visible = false;
 	}
 	
+	private void _on_zoe_body_entered(Node2D body)
+	{
+		speakButton.Visible = true;
+		global.currentTask = "talk_to_zoe";
+	}
+	private void _on_zoe_body_exited(Node2D body)
+	{
+		body_exited_helper();
+		speakButton.Visible = false;
+	}
+
+	private void _on_entrance_to_office_body_entered(Node2D body)
+	{
+		GD.Print("hello");
+		GetTree().ChangeSceneToFile("res://Scenes/Office.tscn");
+	}
 }

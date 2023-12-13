@@ -75,7 +75,7 @@ public partial class HUD : CanvasLayer
 			global.talkedToVeronica = true;
 		}
 		else if (global.currentTask == "talk_to_zayn") {
-			if (global.talkedToVeronica == true) {
+			if (global.talkedToVeronica == true && global.introduceCrossed.Visible == false) {
 				global.introduceCrossed.Visible = true;
 				global.tasksCompleted += 1;
 			}
@@ -84,7 +84,13 @@ public partial class HUD : CanvasLayer
 			myGDScriptNode.Call("_startZaynDialog");
 		}
 		else if (global.currentTask == "talk_to_zoe") {
-			// put stuff here
+			if (global.talkedToVeronica == true && global.introduceCrossed.Visible == false) {
+				global.introduceCrossed.Visible = true;
+				global.tasksCompleted += 1;
+			}
+			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+			GD.Print(myGDScriptNode);
+			myGDScriptNode.Call("_startZoeDialog");
 		}
 	}
 
