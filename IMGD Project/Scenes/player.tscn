@@ -20,7 +20,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u62sn"]
-size = Vector2(16, 24)
+size = Vector2(16, 5)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
@@ -45,6 +45,6 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 4)
+position = Vector2(-4, 13.5)
 shape = SubResource("RectangleShape2D_u62sn")
 debug_color = Color(0.376471, 0.607843, 0.27451, 0.419608)
