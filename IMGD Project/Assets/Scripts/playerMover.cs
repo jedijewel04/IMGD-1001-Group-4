@@ -19,6 +19,9 @@ public partial class playerMover : CharacterBody2D
 		Node HUD = GetNode("/root/HUD");
 		completeTaskButton = HUD.GetNode<TextureButton>("CompleteTaskButton");
 		speakButton = HUD.GetNode<TextureButton>("speakButton");
+
+		completeTaskButton.Visible = false;
+		speakButton.Visible = false;
 	}
 	
 	public void GetInput()
