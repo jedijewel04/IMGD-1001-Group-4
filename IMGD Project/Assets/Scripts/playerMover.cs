@@ -9,6 +9,7 @@ public partial class playerMover : CharacterBody2D
 	bool canPlayerMove;
 	private AnimationPlayer _animationPlayer;
 	private TextureButton completeTaskButton;
+	private TextureButton speakButton;
 
 	public override void _Ready()
 	{
@@ -17,6 +18,10 @@ public partial class playerMover : CharacterBody2D
 		canPlayerMove = global.canPlayerMove;
 		Node HUD = GetNode("/root/HUD");
 		completeTaskButton = HUD.GetNode<TextureButton>("CompleteTaskButton");
+		speakButton = HUD.GetNode<TextureButton>("speakButton");
+
+		completeTaskButton.Visible = false;
+		speakButton.Visible = false;
 	}
 	
 	public void GetInput()
@@ -61,28 +66,108 @@ public partial class playerMover : CharacterBody2D
 		}
 	}
 
-	private void body_entered(String currTask) {
+	private void body_entered_helper(String currTask) {
 		completeTaskButton.Visible = true;
 		global.currentTask = currTask;
 	}
 
-	private void body_exited() {
+	private void body_exited_helper() {
 		completeTaskButton.Visible = false;
 		global.currentTask = null;
 	}
 	
-	private void _on_computer_task_body_entered(Node2D body) { body_entered("send_email"); }
-	private void _on_computer_task_body_exited(Node2D body) { body_exited(); }
+	private void _on_computer_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.sendEmailCrossed.Visible == false) body_entered_helper("send_email"); 
+		}
+	}
+	private void _on_computer_task_body_exited(Node2D body) { body_exited_helper(); }
 
-	private void _on_coffee_task_body_entered(Node2D body) { body_entered("drink_coffee"); }
-	private void _on_coffee_task_body_exited(Node2D body) { body_exited(); }
+	private void _on_coffee_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.drinkCoffeeCrossed.Visible == false) body_entered_helper("drink_coffee");
+		}
+	}
+	private void _on_coffee_task_body_exited(Node2D body) { body_exited_helper(); }
 
-	private void _on_meeting_task_body_entered(Node2D body) { body_entered("meeting"); }
-	private void _on_meeting_task_body_exited(Node2D body) { body_exited(); }
+	private void _on_meeting_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.meetingCrossed.Visible == false) body_entered_helper("meeting");
+		}
+	}
+	private void _on_meeting_task_body_exited(Node2D body) { body_exited_helper(); }
 
-	private void _on_toilet_task_body_entered(Node2D body) { body_entered("use_toilet"); }
-	private void _on_toilet_task_body_exited(Node2D body) { body_exited(); }
+	private void _on_toilet_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.useToiletCrossed.Visible == false) body_entered_helper("use_toilet"); 
+		}
+	}
+	private void _on_toilet_task_body_exited(Node2D body) { body_exited_helper(); }
+
+	private void _on_snack_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.eatSnackCrossed.Visible == false) body_entered_helper("eat_snack"); 
+		}
+	}
+	private void _on_snack_task_body_exited(Node2D body) { body_exited_helper(); }
+
+	private void _on_printer_task_body_entered(Node2D body) 
+	{ 
+		if (global.talkedToVeronica == true) {
+			if (global.printCrossed.Visible == false) body_entered_helper("print");
+		}
+	}
+	private void _on_printer_task_body_exited(Node2D body) { body_exited_helper(); }
+	
+	// Veronica:
+	private void _on_area_2d_body_entered(Node2D body)
+	{
+		//if (global.introduceCrossed.Visible == false) {
+		//	body_entered_helper("talk_to_veronica");
+		//}
+		//else {
+			speakButton.Visible = true;
+			global.currentTask = "talk_to_veronica";
+		//}
+	}
+	private void _on_area_2d_body_exited(Node2D body)
+	{
+		body_exited_helper();
+		speakButton.Visible = false;
+	}
+
+	// Zayn:
+	
+	private void _on_zayn_body_entered(Node2D body)
+	{
+		speakButton.Visible = true;
+		global.currentTask = "talk_to_zayn";
+	}
+	private void _on_zayn_body_exited(Node2D body)
+	{
+		body_exited_helper();
+		speakButton.Visible = false;
+	}
+	
+	private void _on_zoe_body_entered(Node2D body)
+	{
+		speakButton.Visible = true;
+		global.currentTask = "talk_to_zoe";
+	}
+	private void _on_zoe_body_exited(Node2D body)
+	{
+		body_exited_helper();
+		speakButton.Visible = false;
+	}
+
+	private void _on_entrance_to_office_body_entered(Node2D body)
+	{
+		GD.Print("hello");
+		GetTree().ChangeSceneToFile("res://Scenes/Office.tscn");
+	}
 }
-
-
-

@@ -1,0 +1,11 @@
+join Zoe 1
+Zoe: Hey, your name is {PlayerName}, right? Nice to meet you! I'm Zoe.
+- Nice to meet you, too!
+- Yeah.
+Zoe: I'm the public relations manager at G-Neric, let me know if you ever have any ideas to suggest or if you need anything!
+leave Zoe
+join Player 1
+Player: That's good to know, thank you.
+leave Player
+join Zoe 1
+Zoe: Of course. Good luck with your assignments for today.

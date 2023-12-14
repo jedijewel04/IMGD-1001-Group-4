@@ -1,7 +1,70 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmhhxe7cti4uf"]
+[gd_scene load_steps=33 format=3 uid="uid://bmhhxe7cti4uf"]
 
 [ext_resource type="TileSet" uid="uid://dkduj4mg3rosj" path="res://Assets/interiortiles.tres" id="1_gx8s6"]
 [ext_resource type="PackedScene" uid="uid://df0agb61paob7" path="res://Scenes/player.tscn" id="2_pgfk3"]
+[ext_resource type="Texture2D" uid="uid://b6730veu720wl" path="res://Assets/Art/Zayn_front.png" id="3_vtfx5"]
+[ext_resource type="Texture2D" uid="uid://bkb7p0vgdy75j" path="res://Assets/Art/Zoe_front.png" id="4_svs4q"]
+[ext_resource type="Texture2D" uid="uid://xqlpq6v87bpi" path="res://Assets/Art/Veronica_front.png" id="5_xsrjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtoxd"]
+size = Vector2(634.5, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bge"]
+size = Vector2(20, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4exi"]
+size = Vector2(336, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8xh2"]
+size = Vector2(18, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqk0"]
+size = Vector2(87, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a16or"]
+size = Vector2(19, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1688p"]
+size = Vector2(64, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58qe1"]
+size = Vector2(20, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vabl"]
+size = Vector2(149, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4oef"]
+size = Vector2(63.75, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcq8j"]
+size = Vector2(15.5, 307)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru0oh"]
+size = Vector2(20, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y56p"]
+size = Vector2(112, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qucb"]
+size = Vector2(16, 271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_228tv"]
+size = Vector2(108, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naaov"]
+size = Vector2(252, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rls0"]
+size = Vector2(82, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfp0m"]
+size = Vector2(13, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fluh7"]
+size = Vector2(107, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxttu"]
+size = Vector2(62, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2kb"]
 size = Vector2(56.5, 38.5)
@@ -11,6 +74,18 @@ size = Vector2(112, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3eycl"]
 size = Vector2(66, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqa2w"]
+size = Vector2(51, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k18e3"]
+size = Vector2(55, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwvrg"]
+size = Vector2(61, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aw6y"]
+size = Vector2(74, 30)
 
 [node name="office" type="Node2D"]
 z_index = 1
@@ -31,7 +106,7 @@ layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
-layer_1/z_index = 1
+layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(-851976, 524291, 8, -851977, 524291, 8, -851978, 524291, 8, -851979, 524291, 8, -851980, 524291, 8, -851981, 524291, 8, -851982, 524291, 8, -851983, 524291, 8, -851984, 524291, 8, -851985, 524291, 8, -851986, 524291, 8, -851987, 524291, 8, -851988, 524291, 8, -851989, 524291, 8, -851990, 524291, 8, -917512, 327683, 7, -917513, 327683, 7, -917514, 327683, 7, -917515, 327683, 7, -917516, 327683, 7, -917517, 327683, 7, -917518, 327683, 7, -917519, 327683, 7, -917520, 327683, 7, -917521, 327683, 7, -917522, 327683, 7, -917523, 327683, 7, -917524, 327683, 7, -917525, 327683, 7, -917526, 327683, 7, -983048, 327683, 7, -983049, 327683, 7, -983050, 327683, 7, -983051, 327683, 7, -983052, 327683, 7, -983053, 327683, 7, -983054, 327683, 7, -983055, 327683, 7, -983056, 327683, 7, -983057, 327683, 7, -983058, 327683, 7, -983059, 327683, 7, -983060, 327683, 7, -983061, 327683, 7, -983062, 327683, 7, -131080, 393219, 7, -131081, 327683, 7, -131082, 327683, 7, -131083, 327683, 7, -131084, 327683, 7, -131085, 262147, 7, -9, 524291, 8, -10, 524291, 8, -11, 524291, 8, -12, 524291, 8, -13, 458755, 8, -65549, 3, 18, -65544, 131075, 18, -65545, 65539, 18, -65546, 65539, 18, -65547, 65539, 18, -65548, 65539, 18, -8, 589827, 8, -458776, 524291, 8, -458777, 524291, 8, -458778, 524291, 8, -458779, 524291, 8, -458780, 524291, 8, -458781, 524291, 8, -458782, 524291, 8, -524312, 327683, 7, -524313, 327683, 7, -524314, 327683, 7, -524315, 327683, 7, -524316, 327683, 7, -524317, 327683, 7, -524318, 327683, 7, -589854, 327683, 7, -589853, 327683, 7, -589852, 327683, 7, -589851, 327683, 7, -589850, 327683, 7, -589849, 327683, 7, -589848, 327683, 7, 131065, 262147, 7, 196601, 262147, 7, 131066, 327683, 7, 196602, 327683, 7, 131067, 327683, 7, 196603, 327683, 7, 131068, 393219, 7, 196604, 393219, 7, 131071, 262147, 7, 196607, 262147, 7, 65536, 327683, 7, 131072, 327683, 7, 65537, 327683, 7, 131073, 327683, 7, 65538, 327683, 7, 131074, 327683, 7, 65539, 327683, 7, 131075, 327683, 7, 65540, 393219, 7, 131076, 393219, 7, 262137, 458755, 8, 262138, 524291, 8, 262139, 524291, 8, 262140, 131075, 8, 262143, 3, 8, 196608, 524291, 8, 196609, 524291, 8, 196610, 524291, 8, 196611, 524291, 8, 196612, 589827, 8, 262120, 524291, 0, 262119, 524291, 0, 262118, 524291, 0, 262117, 524291, 0, 262116, 524291, 0, 262115, 524291, 0, 262114, 524291, 0, 262113, 524291, 0, 262112, 524291, 0, -131078, 1900550, 26, -131077, 1966086, 26, -131076, 1966086, 26, -131075, 1966086, 26, -131074, 1966086, 26, -131073, 1966086, 26, -196608, 1966086, 26, -196607, 1966086, 26, -196606, 1966086, 26, -196605, 2031622, 26, -196614, 1703942, 25, -262141, 1835014, 25, -327677, 1835014, 25, -262150, 1703942, 25, -262149, 1769478, 25, -262148, 1769478, 25, -262147, 1769478, 25, -262146, 1769478, 25, -262145, 1769478, 25, -327680, 1769478, 25, -327679, 1769478, 25, -327678, 1769478, 25, -262142, 1769478, 25, -262143, 1769478, 25, -262144, 1769478, 25, -196609, 1769478, 25, -196613, 1769478, 25, -196612, 1769478, 25, -196611, 1769478, 25, -196610, 1769478, 25, -65558, 3, 18, -65557, 65539, 18, -65556, 65539, 18, -65555, 65539, 18, -65554, 65539, 18, -65553, 65539, 18, -65552, 131075, 18, -327675, 1769478, 25, -262139, 1769478, 25, -196603, 1769478, 25, -196602, 1769478, 25, -196601, 1769478, 25, -196600, 1769478, 25, -196599, 1769478, 25, -196598, 1769478, 25, -196597, 1769478, 25, -196596, 1769478, 25, -196595, 1769478, 25, -196594, 1769478, 25, -262130, 1769478, 25, -327666, 1769478, 25, -327667, 1769478, 25, -327668, 1769478, 25, -327669, 1769478, 25, -327670, 1769478, 25, -327671, 1769478, 25, -327672, 1769478, 25, -327673, 1769478, 25, -327674, 1769478, 25, -262138, 1769478, 25, -262137, 1769478, 25, -262136, 1769478, 25, -262135, 1769478, 25, -262134, 1769478, 25, -262133, 1769478, 25, -262132, 1769478, 25, -262131, 1769478, 25)
 layer_2/name = "Ceiling"
 layer_2/enabled = true
@@ -43,14 +118,14 @@ layer_2/tile_data = PackedInt32Array(-983063, 786435, 0, -917527, 720899, 1, -85
 layer_3/name = "Objects_0"
 layer_3/enabled = true
 layer_3/modulate = Color(1, 1, 1, 1)
-layer_3/y_sort_enabled = false
+layer_3/y_sort_enabled = true
 layer_3/y_sort_origin = 5
 layer_3/z_index = 3
 layer_3/tile_data = PackedInt32Array(-524297, 196610, 8, -458761, 196610, 9, -851977, 196610, 8, -786441, 196610, 9, -983050, 524290, 10, -917514, 524290, 11, -983049, 524290, 8, -917513, 524290, 9, -983048, 589826, 8, -917512, 589826, 9, -917524, 327684, 16, -917523, 393220, 16, -917518, 655362, 38, -851982, 655362, 39, -786446, 655362, 40, -917517, 720898, 38, -851981, 720898, 39, -786445, 720898, 40, -524312, 393218, 7, -458776, 393218, 8, -393240, 393218, 9, -524318, 393218, 7, -458782, 393218, 8, -393246, 393218, 9, -65555, 786434, 15, -19, 786434, 16, 65517, 786434, 17, -917520, 458754, 12, -851984, 458754, 13, -786448, 458754, 14, -917519, 524290, 12, -851983, 524290, 13, -786447, 524290, 14, -327705, 262146, 10, -262169, 262146, 11, -327709, 327682, 10, -262173, 327682, 11, -393243, 131074, 10, -327707, 131074, 11, -196596, 65540, 10, -196597, 65540, 10, -196594, 196612, 13, -131058, 196612, 14, -196595, 196612, 13, -131059, 196612, 14, -196598, 196612, 13, -131062, 196612, 14, -196599, 196612, 11, -131063, 196612, 14, -196600, 196612, 13, -131064, 196612, 14, -196601, 131076, 11, -131065, 131076, 12, -196602, 131076, 11, -131066, 131076, 12, -196603, 196612, 13, -131067, 196612, 14, -262138, 131076, 10, -262137, 131076, 10, 131072, 393218, 7, 196608, 393218, 8, 262144, 393218, 9, 131075, 393218, 7, 196611, 393218, 8, 262147, 393218, 9, -851985, 196610, 15, -786449, 196610, 16, -720905, 917506, 13, -655369, 917506, 14)
 layer_4/name = "Objects_1"
 layer_4/enabled = true
 layer_4/modulate = Color(1, 1, 1, 1)
-layer_4/y_sort_enabled = false
+layer_4/y_sort_enabled = true
 layer_4/y_sort_origin = 0
 layer_4/z_index = 3
 layer_4/tile_data = PackedInt32Array(-458762, 65538, 30, -393226, 65538, 31, -458761, 131074, 30, -393225, 131074, 31, -458760, 196610, 30, -393224, 196610, 31, -786442, 65538, 30, -720906, 65538, 31, -786441, 131074, 30, -720905, 131074, 31, -786440, 196610, 30, -720904, 196610, 31, -655382, 65538, 30, -589846, 65538, 31, -655381, 131074, 30, -589845, 131074, 31, -655380, 196610, 30, -589844, 196610, 31, -393238, 65538, 30, -327702, 65538, 31, -393237, 131074, 30, -327701, 131074, 31, -393236, 196610, 30, -327700, 196610, 31, -327708, 393218, 0, -262172, 393218, 1, -196636, 393218, 1, -327707, 458754, 0, -262171, 458754, 1, -196635, 458754, 1, -327706, 524290, 0, -262170, 524290, 1, -196634, 524290, 1, -131100, 393218, 1, -131099, 458754, 1, -131098, 524290, 1, -65564, 393218, 1, -65563, 458754, 1, -65562, 524290, 1, -28, 393218, 1, -27, 458754, 1, -26, 524290, 1, 65508, 393218, 2, 65509, 458754, 2, 65510, 524290, 2, -655379, 65538, 30, -589843, 65538, 31, -655378, 131074, 30, -589842, 131074, 31, -655377, 196610, 30, -589841, 196610, 31, -786445, 65538, 30, -720909, 65538, 31, -786444, 131074, 30, -720908, 131074, 31, -786443, 196610, 30, -720907, 196610, 31, -458765, 65538, 30, -393229, 65538, 31, -458764, 131074, 30, -393228, 131074, 31, -458763, 196610, 30, -393227, 196610, 31, -393235, 65538, 30, -327699, 65538, 31, -393234, 131074, 30, -327698, 131074, 31, -393233, 196610, 30, -327697, 196610, 31, -65537, 65541, 6, -262130, 65540, 13, -262131, 65540, 13, -262132, 65540, 13, -262133, 65540, 13, -262134, 65540, 13, -262135, 65540, 13, -262136, 65540, 13, -262137, 65540, 13, -262138, 65540, 13, -262139, 65540, 13, 65550, 196612, 27, 131086, 196612, 28, 65545, 196612, 27, 131081, 196612, 28, 131078, 196612, 65564, 65542, 196612, 65563, 131083, 196612, 65564, 65547, 196612, 65563, -21, 393218, 18, 65515, 393218, 19, -20, 458754, 18, 65516, 458754, 19, -131084, 0, 76, -65548, 0, 77, -12, 0, 76, 65524, 0, 77, -131082, 0, 74, -65546, 0, 75, -10, 0, 74, 65526, 0, 75)
@@ -66,7 +141,7 @@ layer_6/enabled = true
 layer_6/modulate = Color(1, 1, 1, 1)
 layer_6/y_sort_enabled = false
 layer_6/y_sort_origin = 0
-layer_6/z_index = 3
+layer_6/z_index = 2
 layer_6/tile_data = PackedInt32Array(-458763, 196610, 26, -393227, 196610, 27, -327691, 196610, 28, -393226, 65538, 27, -327690, 65538, 28, -393225, 131074, 27, -327689, 131074, 28, -458760, 196610, 26, -393224, 196610, 27, -327688, 196610, 28, -786443, 196610, 26, -720907, 196610, 27, -655371, 196610, 28, -720906, 65538, 27, -655370, 65538, 28, -720905, 131074, 27, -655369, 131074, 28, -786440, 196610, 26, -720904, 196610, 27, -655368, 196610, 28, -589846, 196610, 131099, -524310, 196610, 131100, -524309, 131074, 28, -589844, 196610, 27, -524308, 196610, 28, -327702, 196610, 131099, -262166, 196610, 131100, -655382, 196610, 131098, -589845, 131074, 27, -655380, 196610, 26, -327701, 131074, 27, -262165, 131074, 28, -393236, 196610, 26, -327700, 196610, 27, -262164, 196610, 28, -393238, 196610, 131098, -196637, 327682, 10, -131101, 327682, 11, -196633, 262146, 10, -131097, 262146, 11, -458766, 2, 26, -393230, 2, 27, -327694, 2, 28, -393229, 65538, 27, -327693, 65538, 28, -393228, 131074, 27, -327692, 131074, 28, -786446, 2, 26, -720910, 2, 27, -655374, 2, 28, -720909, 65538, 27, -655373, 65538, 28, -720908, 131074, 27, -655372, 131074, 28, -589843, 262146, 27, -524307, 262146, 28, -589842, 327682, 27, -524306, 327682, 28, -655377, 393218, 26, -589841, 393218, 27, -524305, 393218, 28, -327699, 65538, 27, -262163, 65538, 28, -327698, 131074, 27, -262162, 131074, 28, -393233, 196610, 26, -327697, 196610, 27, -262161, 196610, 28, -131074, 655365, 8, -65538, 655365, 9, 131085, 65540, 15, -196595, 262148, 13, -12, 65536, 72, 65524, 65536, 73, -11, 131072, 72, 65525, 131072, 73, -10, 196608, 72, 65526, 196608, 73, 65527, 458752, 76, 131063, 458752, 77, 196599, 458752, 78, 65528, 524288, 76, 131064, 524288, 77, 196600, 524288, 78)
 layer_7/name = "Objects_4"
 layer_7/enabled = true
@@ -90,9 +165,162 @@ layer_9/y_sort_origin = 0
 layer_9/z_index = 3
 layer_9/tile_data = PackedInt32Array(-327689, 2, 8, -262153, 2, 9, -655369, 2, 8, -589833, 2, 9, -851976, 393218, 10, -786440, 393218, 11, -524309, 2, 8, -458773, 2, 9, -262165, 2, 8, -196629, 2, 9, -25, 262146, 10, 65511, 262146, 11, -29, 327682, 10, 65507, 327682, 11, -589853, 589826, 10, -524317, 589826, 11, -589852, 655362, 10, -524316, 655362, 11, -589850, 0, 14, -524314, 0, 15, -589849, 65536, 14, -524313, 65536, 15, -262172, 65538, 14, -28, 65538, 14, -131098, 851970, 15, -65562, 851970, 16, -27, 917506, 17, 65509, 917506, 18, -196636, 983042, 17, -131100, 983042, 18, -524306, 720898, 13, -458770, 720898, 14, -786445, 720898, 18, -720909, 720898, 19, -655373, 720898, 20)
 
-[node name="Player" parent="." instance=ExtResource("2_pgfk3")]
+[node name="Player" parent="VisibleSprites" instance=ExtResource("2_pgfk3")]
 y_sort_enabled = true
-position = Vector2(-225, -159)
+position = Vector2(-209, 65)
+
+[node name="Colliders" type="StaticBody2D" parent="."]
+z_index = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-62.75, 110)
+shape = SubResource("RectangleShape2D_rtoxd")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(251, 18)
+shape = SubResource("RectangleShape2D_s5bge")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(73, -26)
+shape = SubResource("RectangleShape2D_h4exi")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(232, -12)
+shape = SubResource("RectangleShape2D_p8xh2")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(38.5, -14)
+shape = SubResource("RectangleShape2D_jlqk0")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(72.5, 30)
+shape = SubResource("RectangleShape2D_a16or")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(33, 62)
+shape = SubResource("RectangleShape2D_1688p")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-360, 76)
+shape = SubResource("RectangleShape2D_58qe1")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-440.5, 79)
+shape = SubResource("RectangleShape2D_8vabl")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(17, 58)
+shape = SubResource("RectangleShape2D_r4oef")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-79, 58)
+shape = SubResource("RectangleShape2D_r4oef")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-102.75, -101.5)
+shape = SubResource("RectangleShape2D_rcq8j")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-489, -38.5)
+shape = SubResource("RectangleShape2D_ru0oh")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-423, -122)
+shape = SubResource("RectangleShape2D_0y56p")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-359, -119.5)
+shape = SubResource("RectangleShape2D_2qucb")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-293, -5)
+shape = SubResource("RectangleShape2D_228tv")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-152, -5)
+shape = SubResource("RectangleShape2D_228tv")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-229, -213)
+shape = SubResource("RectangleShape2D_naaov")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-152, 22)
+shape = SubResource("RectangleShape2D_7rls0")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-71, 65.25)
+shape = SubResource("RectangleShape2D_wfp0m")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-157.5, -99)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-309, -146)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-309, -78)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-162, -180)
+shape = SubResource("RectangleShape2D_fluh7")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Colliders"]
+z_index = 2
+position = Vector2(-224, -210)
+shape = SubResource("RectangleShape2D_uxttu")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
 
 [node name="Task_Collision_Boxes" type="Node" parent="."]
 
@@ -111,7 +339,7 @@ position = Vector2(-365, -84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Coffee_Task"]
 z_index = 2
-position = Vector2(117, -107.5)
+position = Vector2(117, -104)
 shape = SubResource("RectangleShape2D_sm2kb")
 
 [node name="Meeting_Task" type="Area2D" parent="Task_Collision_Boxes"]
@@ -119,6 +347,7 @@ z_index = 2
 position = Vector2(-365, -84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Meeting_Task"]
+visible = false
 z_index = 2
 position = Vector2(-98, 52)
 shape = SubResource("RectangleShape2D_k45vm")
@@ -132,11 +361,82 @@ z_index = 2
 position = Vector2(357, 76)
 shape = SubResource("RectangleShape2D_3eycl")
 
-[connection signal="body_entered" from="Task_Collision_Boxes/Computer_Task" to="Player" method="_on_computer_task_body_entered"]
-[connection signal="body_exited" from="Task_Collision_Boxes/Computer_Task" to="Player" method="_on_computer_task_body_exited"]
-[connection signal="body_entered" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_entered"]
-[connection signal="body_exited" from="Task_Collision_Boxes/Coffee_Task" to="Player" method="_on_coffee_task_body_exited"]
-[connection signal="body_entered" from="Task_Collision_Boxes/Meeting_Task" to="Player" method="_on_meeting_task_body_entered"]
-[connection signal="body_exited" from="Task_Collision_Boxes/Meeting_Task" to="Player" method="_on_meeting_task_body_exited"]
-[connection signal="body_entered" from="Task_Collision_Boxes/Toilet_Task" to="Player" method="_on_toilet_task_body_entered"]
-[connection signal="body_exited" from="Task_Collision_Boxes/Toilet_Task" to="Player" method="_on_toilet_task_body_exited"]
+[node name="Snack_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Snack_Task"]
+z_index = 2
+position = Vector2(518, 84)
+shape = SubResource("RectangleShape2D_3eycl")
+
+[node name="Printer_Task" type="Area2D" parent="Task_Collision_Boxes"]
+z_index = 2
+position = Vector2(-365, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task_Collision_Boxes/Printer_Task"]
+z_index = 2
+position = Vector2(15.5, 99)
+shape = SubResource("RectangleShape2D_aqa2w")
+
+[node name="Veronica" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Veronica"]
+z_index = 2
+position = Vector2(-315.5, 70)
+shape = SubResource("RectangleShape2D_k18e3")
+debug_color = Color(0.909804, 0, 0.72549, 0.419608)
+
+[node name="VeronicaSprite" type="Sprite2D" parent="Veronica"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-325, 60)
+texture = ExtResource("5_xsrjh")
+
+[node name="Zayn" type="Area2D" parent="."]
+
+[node name="ZaynSprite" type="Sprite2D" parent="Zayn"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-62, -4)
+texture = ExtResource("3_vtfx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zayn"]
+z_index = 2
+position = Vector2(-63, 10)
+shape = SubResource("RectangleShape2D_dwvrg")
+debug_color = Color(0.909804, 0, 0.72549, 0.419608)
+
+[node name="Zoe" type="Area2D" parent="."]
+
+[node name="ZoeSprite" type="Sprite2D" parent="Zoe"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-295, -188)
+texture = ExtResource("4_svs4q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zoe"]
+z_index = 2
+position = Vector2(-293, -183)
+shape = SubResource("RectangleShape2D_4aw6y")
+debug_color = Color(0.909804, 0, 0.72549, 0.419608)
+
+[connection signal="area_entered" from="Task_Collision_Boxes/Computer_Task" to="VisibleSprites/Player" method="_on_computer_task_area_entered"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Computer_Task" to="VisibleSprites/Player" method="_on_computer_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Computer_Task" to="VisibleSprites/Player" method="_on_computer_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Coffee_Task" to="VisibleSprites/Player" method="_on_coffee_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Coffee_Task" to="VisibleSprites/Player" method="_on_coffee_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Meeting_Task" to="VisibleSprites/Player" method="_on_meeting_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Meeting_Task" to="VisibleSprites/Player" method="_on_meeting_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Toilet_Task" to="VisibleSprites/Player" method="_on_toilet_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Toilet_Task" to="VisibleSprites/Player" method="_on_toilet_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Snack_Task" to="VisibleSprites/Player" method="_on_snack_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Snack_Task" to="VisibleSprites/Player" method="_on_snack_task_body_exited"]
+[connection signal="body_entered" from="Task_Collision_Boxes/Printer_Task" to="VisibleSprites/Player" method="_on_printer_task_body_entered"]
+[connection signal="body_exited" from="Task_Collision_Boxes/Printer_Task" to="VisibleSprites/Player" method="_on_printer_task_body_exited"]
+[connection signal="body_entered" from="Veronica" to="VisibleSprites/Player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Veronica" to="VisibleSprites/Player" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Zayn" to="VisibleSprites/Player" method="_on_zayn_body_entered"]
+[connection signal="body_exited" from="Zayn" to="VisibleSprites/Player" method="_on_zayn_body_exited"]
+[connection signal="body_entered" from="Zoe" to="VisibleSprites/Player" method="_on_zoe_body_entered"]
+[connection signal="body_exited" from="Zoe" to="VisibleSprites/Player" method="_on_zoe_body_exited"]

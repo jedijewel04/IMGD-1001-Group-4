@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cox7jt54ssvd8"]
+[gd_scene load_steps=14 format=3 uid="uid://cox7jt54ssvd8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/HUD.cs" id="1_nbeb8"]
 [ext_resource type="Texture2D" uid="uid://bbuo7xfsj5y30" path="res://Assets/GUI/TaskList.png" id="2_mgl1t"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bugnmt5bit3jm" path="res://Assets/GUI/print_documents.png" id="10_x6lqq"]
 [ext_resource type="Texture2D" uid="uid://bx6nm2bj4r7q5" path="res://Assets/GUI/complete_task.png" id="11_4or7v"]
 [ext_resource type="Texture2D" uid="uid://ibvnqtt6ju36" path="res://Assets/GUI/complete_task_down.png" id="12_ywdy6"]
+[ext_resource type="Texture2D" uid="uid://by74xo8itbtco" path="res://Assets/GUI/speakButton.png" id="13_aolx5"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_nbeb8")
@@ -119,5 +120,14 @@ offset_bottom = 676.0
 texture_normal = ExtResource("11_4or7v")
 texture_pressed = ExtResource("12_ywdy6")
 
+[node name="speakButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 1213.0
+offset_top = 514.0
+offset_right = 1533.0
+offset_bottom = 674.0
+texture_normal = ExtResource("13_aolx5")
+
 [connection signal="pressed" from="TaskButton" to="." method="_on_task_button_pressed"]
 [connection signal="pressed" from="CompleteTaskButton" to="." method="_on_complete_task_button_pressed"]
+[connection signal="pressed" from="speakButton" to="." method="_on_speak_button_pressed"]

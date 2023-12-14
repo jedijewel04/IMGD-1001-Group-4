@@ -8,13 +8,6 @@ public partial class HUD : CanvasLayer
 	TextureRect taskList;
 	TextureButton taskButton;
 
-	// Tasks:
-	// think about making this arrays or something better instead.. hardcoding it sucks
-	TextureRect sendEmailCrossed;
-	TextureRect drinkCoffeeCrossed;
-	TextureRect meetingCrossed;
-	TextureRect useToiletCrossed;
-
 	ColorRect fade;
 	
 	bool canPlayerMove;
@@ -30,10 +23,6 @@ public partial class HUD : CanvasLayer
 		taskButton = GetNode<TextureButton>("TaskButton");
 		fade = GetNode<ColorRect>("Fade");
 		canPlayerMove = global.canPlayerMove;
-		sendEmailCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/send_email_crossed");
-		drinkCoffeeCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/drink_coffee_crossed");
-		meetingCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/attend_meeting_crossed");
-		useToiletCrossed = GetNode<TextureRect>("/root/HUD/Expanded_Tasks/use_toilet_crossed");
 	}
 
 	private void _on_task_button_pressed()
@@ -54,19 +43,57 @@ public partial class HUD : CanvasLayer
 
 	private void _on_complete_task_button_pressed()
 	{
-		if (global.currentTask == "send_email") {
-			sendEmailCrossed.Visible = true;
-		}
-		else if (global.currentTask == "drink_coffee") {
-			drinkCoffeeCrossed.Visible = true;
-		}
-		else if (global.currentTask == "meeting") {
-			meetingCrossed.Visible = true;
-		}
-		else if (global.currentTask == "use_toilet") {
-			useToiletCrossed.Visible = true;
+		if (global.currentTask != "talk_to_veronica") {
+			if (global.currentTask == "send_email") {
+				global.sendEmailCrossed.Visible = true;
+			}
+			else if (global.currentTask == "drink_coffee") {
+				global.drinkCoffeeCrossed.Visible = true;
+			}
+			else if (global.currentTask == "meeting") {
+				global.meetingCrossed.Visible = true;
+			}
+			else if (global.currentTask == "use_toilet") {
+				global.useToiletCrossed.Visible = true;
+			}
+			else if (global.currentTask == "eat_snack") {
+				global.eatSnackCrossed.Visible = true;
+			}
+			else if (global.currentTask == "print") {
+				global.printCrossed.Visible = true;
+			}
+			global.tasksCompleted += 1;
 		}
 	}
+
+	private void _on_speak_button_pressed()
+	{
+		if (global.currentTask == "talk_to_veronica") {
+			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+			GD.Print(myGDScriptNode);
+			myGDScriptNode.Call("_startVeronicaDialog", global.tasksCompleted);
+			global.talkedToVeronica = true;
+		}
+		else if (global.currentTask == "talk_to_zayn") {
+			if (global.talkedToVeronica == true && global.introduceCrossed.Visible == false) {
+				global.introduceCrossed.Visible = true;
+				global.tasksCompleted += 1;
+			}
+			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+			GD.Print(myGDScriptNode);
+			myGDScriptNode.Call("_startZaynDialog");
+		}
+		else if (global.currentTask == "talk_to_zoe") {
+			if (global.talkedToVeronica == true && global.introduceCrossed.Visible == false) {
+				global.introduceCrossed.Visible = true;
+				global.tasksCompleted += 1;
+			}
+			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+			GD.Print(myGDScriptNode);
+			myGDScriptNode.Call("_startZoeDialog");
+		}
+	}
+
 
 	public override void _PhysicsProcess(double delta)
 	{
