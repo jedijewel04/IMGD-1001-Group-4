@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="IMGD Group 4 Game"
-run/main_scene="res://Scenes/title_screen.tscn"
+run/main_scene="res://Scenes/mainstreet.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -49,7 +49,7 @@ variables={
 layout/styles={
 "Default": {
 "export_overrides": {
-"text_size": "25.0"
+"text_size": "18.0"
 },
 "inherits": "",
 "layout": "res://addons/dialogic/Modules/DefaultLayouts/Default/DialogicDefaultLayout.tscn"

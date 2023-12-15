@@ -30,3 +30,9 @@ func _startZoeDialog():
 		var dialog = Dialogic.start("convo_6")
 	else:
 		var dialog = Dialogic.start("convo_7")
+
+func _startDogDialog():
+	var dialog = Dialogic.start("convo_8")
+
+func _startPlayerDialog():
+	var dialog = Dialogic.start("convo_9")

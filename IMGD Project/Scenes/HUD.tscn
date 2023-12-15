@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cox7jt54ssvd8"]
+[gd_scene load_steps=16 format=3 uid="uid://cox7jt54ssvd8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/HUD.cs" id="1_nbeb8"]
 [ext_resource type="Texture2D" uid="uid://bbuo7xfsj5y30" path="res://Assets/GUI/TaskList.png" id="2_mgl1t"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://boqlg165d8fu2" path="res://Assets/GUI/attend_meeting.png" id="9_fjhjw"]
 [ext_resource type="Texture2D" uid="uid://bugnmt5bit3jm" path="res://Assets/GUI/print_documents.png" id="10_x6lqq"]
 [ext_resource type="Texture2D" uid="uid://bx6nm2bj4r7q5" path="res://Assets/GUI/complete_task.png" id="11_4or7v"]
+[ext_resource type="Texture2D" uid="uid://rst62035lyha" path="res://Assets/GUI/TaskButton_down.png" id="11_pqyy1"]
 [ext_resource type="Texture2D" uid="uid://ibvnqtt6ju36" path="res://Assets/GUI/complete_task_down.png" id="12_ywdy6"]
 [ext_resource type="Texture2D" uid="uid://by74xo8itbtco" path="res://Assets/GUI/speakButton.png" id="13_aolx5"]
+[ext_resource type="Texture2D" uid="uid://dyvb81dyc0aiy" path="res://Assets/GUI/speak_down.png" id="14_dop6i"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_nbeb8")
@@ -92,13 +94,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -72.0
-offset_top = -56.0
-offset_right = -24.0
-offset_bottom = -24.0
+offset_left = -320.0
+offset_top = -223.0
+offset_bottom = 17.0
 grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("3_eylj7")
+texture_pressed = ExtResource("11_pqyy1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -127,6 +129,7 @@ offset_top = 514.0
 offset_right = 1533.0
 offset_bottom = 674.0
 texture_normal = ExtResource("13_aolx5")
+texture_pressed = ExtResource("14_dop6i")
 
 [connection signal="pressed" from="TaskButton" to="." method="_on_task_button_pressed"]
 [connection signal="pressed" from="CompleteTaskButton" to="." method="_on_complete_task_button_pressed"]

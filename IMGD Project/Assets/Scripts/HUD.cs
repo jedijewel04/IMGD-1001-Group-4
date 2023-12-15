@@ -70,7 +70,6 @@ public partial class HUD : CanvasLayer
 	{
 		if (global.currentTask == "talk_to_veronica") {
 			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
-			GD.Print(myGDScriptNode);
 			myGDScriptNode.Call("_startVeronicaDialog", global.tasksCompleted);
 			global.talkedToVeronica = true;
 		}
@@ -80,7 +79,6 @@ public partial class HUD : CanvasLayer
 				global.tasksCompleted += 1;
 			}
 			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
-			GD.Print(myGDScriptNode);
 			myGDScriptNode.Call("_startZaynDialog");
 		}
 		else if (global.currentTask == "talk_to_zoe") {
@@ -89,8 +87,11 @@ public partial class HUD : CanvasLayer
 				global.tasksCompleted += 1;
 			}
 			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
-			GD.Print(myGDScriptNode);
 			myGDScriptNode.Call("_startZoeDialog");
+		}
+		else if (global.currentTask == "talk_to_dog") {
+			Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+			myGDScriptNode.Call("_startDogDialog");
 		}
 	}
 

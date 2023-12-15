@@ -64,6 +64,10 @@ public partial class playerMover : CharacterBody2D
 				_animationPlayer.Stop();
 			}
 		}
+
+		if (GetTree().CurrentScene.Name == "Office") {
+			
+		}
 	}
 
 	private void body_entered_helper(String currTask) {
@@ -165,9 +169,25 @@ public partial class playerMover : CharacterBody2D
 		speakButton.Visible = false;
 	}
 
+	private void _on_dog_body_entered(Node2D body)
+	{
+		speakButton.Visible = true;
+		global.currentTask = "talk_to_dog";
+	}
+	private void _on_dog_body_exited(Node2D body)
+	{
+		body_exited_helper();
+		speakButton.Visible = false;
+	}
+
+	private void _on_player_dialogue_body_entered(Node2D body)
+	{
+		Node2D myGDScriptNode = GetNode<Node2D>("/root/Dialogue");
+		myGDScriptNode.Call("_startPlayerDialog");
+	}
+
 	private void _on_entrance_to_office_body_entered(Node2D body)
 	{
-		GD.Print("hello");
 		GetTree().ChangeSceneToFile("res://Scenes/Office.tscn");
 	}
 }
